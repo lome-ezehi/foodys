@@ -26,13 +26,27 @@
         img{
             background-color: white;
         }
-
+        .cat_link{
+            margin: 0 20px;
+            height: auto !important;
+            width: auto !important;
+        }
+        .categories{
+            padding: 30px 0;
+        }
+        .order_link:hover{
+            color: greenyellow !important;
+        }
+        .card_index{
+            height: 430px;
+        }
     </style>
 </head>
 <body>
-    <footer class="page-footer green darken-4">
+    <footer class="page-footer white">
+        <div class="divider"></div>
         <div class="container center-align">
-            <h4 class="center-align white-text">&copy; 2024 <em>Föödys</em></h4>
+            <h4 class="center-align black-text">&copy; 2024 <em>Föödys</em></h4>
         </div>
     </footer>
         
@@ -40,6 +54,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/jqueryv3.4.1.js"></script>
     <script src="./assets/js/materialize.js"></script>
+    <script src="./assets/js/script.js"></script>
     <script>
         $(document).ready(function(){
             $('.sidenav').sidenav();

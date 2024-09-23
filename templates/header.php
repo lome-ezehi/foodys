@@ -111,18 +111,17 @@
 </head>
 <body>
     <header>
-        <nav class="green darken-4 z-depth-0">
+        <nav class="white z-depth-0">
             <div class="container">
-                <a href="./index.php" class="brand-logo"><em>Föödys</em></a>
+                <a href="./index.php" class="brand-logo black-text"><em>Föödys</em></a>
                 <ul class="right">
-                    <li><a href="./index.php" class="white-text"><i class="material-icons left">home</i>Home</a></li>
-                    <li><a href="">Orders Placed</a></li>
-                    <li><a href="">Cart</a></li>
-                    <li><a href="signup.php" class="white-text">SIGNUP</a></li>
-                    <li><a href="login.php" class="white-text">LOGIN</a></li>
+                    <li><a href="./index.php" class="black-text"><i class="material-icons left">home</i>Home</a></li>
+                    <li><a href="./insert_order.php" class="black-text">Insert Order</a></li>
+                    <li><a href="login.php" class="black-text">LOGIN</a></li>
                 </ul>
             </div>
         </nav>
+        <div class="divider"></div>
     </header>
     <script src="./assets/Js/jqueryv3.4.1.js"></script>
     <script src="./assets/Js/materialize.js"></script>
