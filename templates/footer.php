@@ -40,13 +40,16 @@
         .card_index{
             height: 430px;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <footer class="page-footer white">
         <div class="divider"></div>
         <div class="container center-align">
-            <h4 class="center-align black-text">&copy; 2024 <em>Föödys</em></h4>
+            <h5 class="center-align black-text"><a href="./index.php" class="brand-logo black-text"><em>Föödys</em></a> &copy; 2024 </h5>
         </div>
     </footer>
         

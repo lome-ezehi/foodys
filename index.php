@@ -25,41 +25,37 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
 <body>
     <main>
         <div class="container">
-            <h3>All categories</h3>
-            <button href="#breakfast" class="btn green lighten-2 accent-4 cat_btn center-align cat_link">
-                <i class="material-icons ">free_breakfast</i><br>
-                Breakfast
+            <h3>All Categories</h3>
+            <button onclick="showCategory('breakfast')" class="btn green lighten-2 accent-4 cat_btn center-align cat_link">
+                <i class="material-icons">free_breakfast</i><br>Breakfast
             </button>
-            <button href="#" class="btn green lighten-2 accent-4 cat_btn cat_link">
-                <i class="material-icons prefix">lunch_dining</i><br>
-                Lunch
+            <button onclick="showCategory('lunch')" class="btn green lighten-2 accent-4 cat_btn cat_link">
+                <i class="material-icons prefix">lunch_dining</i><br>Lunch
             </button>
-            <button href="#" class="btn green lighten-2 accent-4 cat_btn cat_link">
-                <i class="material-icons prefix">dinner_dining</i><br> 
-                Dinner
+            <button onclick="showCategory('dinner')" class="btn green lighten-2 accent-4 cat_btn cat_link">
+                <i class="material-icons prefix">dinner_dining</i><br>Dinner
             </button>
-            <button href="#" class="btn green lighten-2 accent-4 cat_btn cat_link">
-                <i class="material-icons prefix">wine_bar</i><br>
-                Drinks
+            <button onclick="showCategory('drink')" class="btn green lighten-2 accent-4 cat_btn cat_link">
+                <i class="material-icons prefix">wine_bar</i><br>Drinks
             </button>
-            <button href="#" class="btn green center-align lighten-2 accent-4 cat_btn cat_link">
-                <i class="material-icons prefix">cake</i><br>
-                Dessert
+            <button onclick="showCategory('dessert')" class="btn green center-align lighten-2 accent-4 cat_btn cat_link">
+                <i class="material-icons prefix">cake</i><br>Dessert
             </button>
         </div>
         <!-- Breakfast -->
-        <div id="breakfast" class="container categories">
+        <div id="breakfast" class="container categories ">
             <div class="divider"></div>
-            <h3 >Breakfast</h3><br>
+            <h3>Breakfast</h3><br>
             <div class="row">
-                <?php
-                foreach ($breakfasts as $breakfast) { ?>
+                <?php foreach ($breakfasts as $breakfast) { ?>
                 <div class="col s12 m6 l4">
                     <div class="card card_index">
                         <div class="card-image">
                             <img src="./assets/img/<?php echo $breakfast['food_type']; ?>.jpg" alt="" height="300px">
                             <span class="card-title black-text"><?php echo $breakfast['food_name']; ?></span>
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green lighten-2 accent-4"><i class="material-icons prefix">add_shopping_cart</i></a>
+                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green lighten-2 accent-4">
+                                <i class="material-icons prefix">add_shopping_cart</i>
+                            </a>
                         </div>
                         <div class="card-content">
                             <p><?php echo $breakfast['food_description']; ?></p>
@@ -73,7 +69,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
             </div>
         </div>
         <!-- Lunch -->
-        <div id="lunch" class="container categories">
+        <div id="lunch" class="container hidden categories">
             <div class="divider"></div>
             <h3>Lunch</h3><br>
             <div class="row">
@@ -98,7 +94,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
             </div>
         </div>
         <!-- Dinner -->
-        <div id="dinner" class="container categories">
+        <div id="dinner" class="container hidden categories">
             <div class="divider"></div>
             <h3 >Dinner</h3><br>
             <div class="row">
@@ -123,7 +119,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
             </div>
         </div>
         <!-- Drinks -->
-        <div id="drink" class="container categories">
+        <div id="drink" class="container hidden categories">
             <div class="divider"></div>
             <h3 >Drinks</h3><br>
             <div class="row">
@@ -148,7 +144,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
             </div>
         </div>
         <!-- Dessert -->
-        <div id="dessert" class="container categories">
+        <div id="dessert" class="container hidden categories">
             <div class="divider"></div>
             <h3 >Dessert</h3><br>
             <div class="row">
@@ -173,6 +169,17 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
             </div>
         </div>
     </main>
+    <script>
+        function showCategory(category) {
+            // Hide all categories first
+            var categories = document.querySelectorAll('.container.categories');
+            categories.forEach(function(cat) {
+                cat.classList.add('hidden');
+            });
+            // Show the selected category
+            document.getElementById(category).classList.remove('hidden');
+        }
+    </script>
 </body>
 <?php
 include ('./templates/footer.php');

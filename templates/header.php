@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
         *{
-        font-family: 'Josefin Sans', serif;
+        font-family: 'Karla', sans-serif;
         font-optical-sizing: auto;
-        font-weight: normal;
+        font-weight: 400;
         }
         .name{
             font-weight: bolder;
@@ -44,7 +44,6 @@
         transition: ease-out .2s;
         color: #0D47A1 !important;
         }
-        
         .d_container{
             /* background-color: red; */
             padding-top: 10% !important;
@@ -113,10 +112,10 @@
     <header>
         <nav class="white z-depth-0">
             <div class="container">
-                <a href="./index.php" class="brand-logo black-text"><em>Föödys</em></a>
+                <a href="index.php" class="brand-logo black-text"><em>Föödys</em></a>
                 <ul class="right">
-                    <li><a href="./index.php" class="black-text"><i class="material-icons left">home</i>Home</a></li>
-                    <li><a href="./insert_order.php" class="black-text">Insert Order</a></li>
+                    <li><a href="index.php" class="black-text"><i class="material-icons left">home</i>Home</a></li>
+                    <li><a href="insert_order.php" class="black-text">Insert Order</a></li>
                     <li><a href="login.php" class="black-text">LOGIN</a></li>
                 </ul>
             </div>
