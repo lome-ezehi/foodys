@@ -1,6 +1,6 @@
 <?php
+include('./templates/nav.php');
 include('./templates/connect.php');
-include('./templates/header.php');
 
 $username = ' ';
 $password = ' ';
@@ -21,8 +21,8 @@ if (isset($_POST['login'])) {
         // checks if password is correct
         if ($login_details['password'] === $password) {
             session_start();
-            $_SESSION['username'] = $login_details['username'];
-            header('Location: landing_page.php');
+            $_SESSION['username'] = $_POST['username'];
+            header('Location: index.php');
             exit();
         }else {
             echo 'wrong password';
@@ -35,7 +35,7 @@ if (isset($_POST['login'])) {
 
 <main>
     <div class="container center-align">
-        <div class="container">
+        <div class="container login_container">
             <h1>Login</h1>
             <div class="container">
                 <div class="row">

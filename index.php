@@ -1,6 +1,7 @@
 <?php
+include ('./templates/nav.php');
 include ('./templates/connect.php');
-include ('./templates/header.php');
+
 
 $breakfast_query = "SELECT * FROM `foodys_tb` WHERE `food_type` = 'breakfast' ";
 $lunch_query = "SELECT * FROM `foodys_tb` WHERE `food_type` = 'lunch' ";
@@ -26,42 +27,75 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
     <main>
         <div class="container">
             <h3>All Categories</h3>
-            <button onclick="showCategory('breakfast')" class="btn green lighten-2 accent-4 cat_btn center-align cat_link">
-                <i class="material-icons">free_breakfast</i><br>Breakfast
-            </button>
-            <button onclick="showCategory('lunch')" class="btn green lighten-2 accent-4 cat_btn cat_link">
-                <i class="material-icons prefix">lunch_dining</i><br>Lunch
-            </button>
-            <button onclick="showCategory('dinner')" class="btn green lighten-2 accent-4 cat_btn cat_link">
-                <i class="material-icons prefix">dinner_dining</i><br>Dinner
-            </button>
-            <button onclick="showCategory('drink')" class="btn green lighten-2 accent-4 cat_btn cat_link">
-                <i class="material-icons prefix">wine_bar</i><br>Drinks
-            </button>
-            <button onclick="showCategory('dessert')" class="btn green center-align lighten-2 accent-4 cat_btn cat_link">
-                <i class="material-icons prefix">cake</i><br>Dessert
-            </button>
+            <div class="row">
+                <div class="col l2">
+                    <a onclick="showCategory('dessert')" class="btn green center-align accent-4 cat_link">
+                        <i class="material-icons left">cake</i>Dessert
+                    </a>
+                </div>
+                <div class="col l1"></div>
+                <div class="col l2">
+                    <a onclick="showCategory('breakfast')" class="btn green accent-4 center-align cat_link"><i class="material-icons left">free_breakfast</i>Breakfast</a>
+                </div>
+                <div class="col l2">
+                    <a onclick="showCategory('lunch')" class="btn green accent-4 cat_link center-align"><i class="material-icons left">lunch_dining</i>Lunch</a>
+                </div>
+                <div class="col l2">
+                    <a onclick="showCategory('dinner')" class="btn green accent-4 cat_link">
+                        <i class="material-icons left">dinner_dining</i>Dinner
+                    </a>
+                </div>
+                <div class="col l1"></div>
+                <div class="col l2">
+                    <a onclick="showCategory('drink')" class="btn green accent-4 cat_link">
+                        <i class="material-icons left">wine_bar</i>Drinks
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Dessert -->
+        <div id="dessert" class="container hidden categories">
+            <div class="divider"></div>
+            <h4 >Dessert</h4><br>
+            <div class="row">
+                <?php
+                foreach ($desserts as $dessert) { ?>
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable card_index">
+                        <div class="card-image">
+                            <img src="./uploads/<?php echo $dessert['image_name']; ?>" alt="" >
+                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title black-text"><?php echo $dessert['food_name']; ?></span>
+                            <p>₦<?php echo $dessert['food_price']; ?></p>
+                        </div>
+                        <div class="card-action">
+                            <a href="order.php?id=<?php echo $dessert['food_id'] ?>" class="green-text text-darken-3 order_link"><i class="material-icons left">dinner_dining</i>Order now</a>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
         </div>
         <!-- Breakfast -->
         <div id="breakfast" class="container categories ">
             <div class="divider"></div>
-            <h3>Breakfast</h3><br>
+            <h4>Breakfast</h4><br>
             <div class="row">
                 <?php foreach ($breakfasts as $breakfast) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card card_index">
+                    <div class="card hoverable card_index">
                         <div class="card-image">
-                            <img src="./assets/img/<?php echo $breakfast['food_type']; ?>.jpg" alt="" height="300px">
-                            <span class="card-title black-text"><?php echo $breakfast['food_name']; ?></span>
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green lighten-2 accent-4">
-                                <i class="material-icons prefix">add_shopping_cart</i>
-                            </a>
+                            <img src="./uploads/<?php echo $breakfast['image_name']; ?>" alt="">
+                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                         </div>
                         <div class="card-content">
-                            <p><?php echo $breakfast['food_description']; ?></p>
+                            <span class="card-title black-text"><?php echo $breakfast['food_name']; ?></span>
+                            <p class="black-text">₦<?php echo $breakfast['food_price']; ?></p>
                         </div>
                         <div class="card-action">
-                            <a href="" class="green-text text-darken-3 order_link">Order Now</a>
+                            <a href="order.php?id=<?php echo $breakfast['food_id'] ?>" class="green-text text-darken-3 order_link"><i class="material-icons left">dinner_dining</i>Order now</a>
                         </div>
                     </div>
                 </div>
@@ -71,22 +105,22 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
         <!-- Lunch -->
         <div id="lunch" class="container hidden categories">
             <div class="divider"></div>
-            <h3>Lunch</h3><br>
+            <h4>Lunch</h4><br>
             <div class="row">
                 <?php
                 foreach ($lunchs as $lunch) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card card_index">
+                    <div class="card hoverable card_index">
                         <div class="card-image">
-                            <img src="./assets/img/<?php echo $lunch['food_type']; ?>.jpg" alt="" height="300px">
-                            <span class="card-title black-text"><?php echo $lunch['food_name']; ?></span>
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green lighten-2 accent-4"><i class="material-icons prefix">add_shopping_cart</i></a>
+                            <img src="./uploads/<?php echo $lunch['image_name']; ?>" alt="" >
+                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                         </div>
                         <div class="card-content">
-                            <p><?php echo $lunch['food_description']; ?></p>
+                            <span class="card-title black-text"><?php echo $lunch['food_name']; ?></span>
+                            <p>₦<?php echo $lunch['food_price']; ?></p>
                         </div>
                         <div class="card-action">
-                            <a href="" class="green-text text-darken-3 order_link">Order Now</a>
+                            <a href="order.php?id=<?php echo $lunch['food_id'] ?>" class="green-text text-darken-3 order_link"><i class="material-icons left">dinner_dining</i>Order now</a>
                         </div>
                     </div>
                 </div>
@@ -96,22 +130,22 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
         <!-- Dinner -->
         <div id="dinner" class="container hidden categories">
             <div class="divider"></div>
-            <h3 >Dinner</h3><br>
+            <h4 >Dinner</h4><br>
             <div class="row">
                 <?php
                 foreach ($dinners as $dinner) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card card_index">
+                    <div class="card hoverable card_index">
                         <div class="card-image">
-                            <img src="./assets/img/<?php echo $dinner['food_type']; ?>.jpg" alt="" height="300px">
-                            <span class="card-title black-text"><?php echo $dinner['food_name']; ?></span>
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green lighten-2 accent-4"><i class="material-icons prefix">add_shopping_cart</i></a>
+                            <img src="./uploads/<?php echo $dinner['image_name']; ?>" alt="" >
+                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                         </div>
                         <div class="card-content">
-                            <p><?php echo $dinner['food_description']; ?></p>
+                            <span class="card-title black-text"><?php echo $dinner['food_name']; ?></span>
+                            <p>₦<?php echo $dinner['food_price']; ?></p>
                         </div>
                         <div class="card-action">
-                            <a href="" class="green-text text-darken-3 order_link">Order Now</a>
+                            <a href="order.php?id=<?php echo $dinner['food_id'] ?>" class="green-text text-darken-3 order_link"><i class="material-icons left">dinner_dining</i>Order now</a>
                         </div>
                     </div>
                 </div>
@@ -121,47 +155,22 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
         <!-- Drinks -->
         <div id="drink" class="container hidden categories">
             <div class="divider"></div>
-            <h3 >Drinks</h3><br>
+            <h4 >Drinks</h4><br>
             <div class="row">
                 <?php
                 foreach ($drinks as $drink) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card card_index">
+                    <div class="card hoverable card_index">
                         <div class="card-image">
-                            <img src="./assets/img/<?php echo $drink['food_type']; ?>.jpg" alt="" height="300px">
+                            <img src="./uploads/<?php echo $drink['image_name']; ?>" alt="" >
+                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
+                        </div>
+                        <div class="card-content">
                             <span class="card-title black-text"><?php echo $drink['food_name']; ?></span>
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green lighten-2 accent-4"><i class="material-icons prefix">add_shopping_cart</i></a>
-                        </div>
-                        <div class="card-content">
-                            <p><?php echo $drink['food_description']; ?></p>
+                            <p><?php echo $drink['food_price']; ?></p>
                         </div>
                         <div class="card-action">
-                            <a href="" class="green-text text-darken-3 order_link">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <?php } ?>
-            </div>
-        </div>
-        <!-- Dessert -->
-        <div id="dessert" class="container hidden categories">
-            <div class="divider"></div>
-            <h3 >Dessert</h3><br>
-            <div class="row">
-                <?php
-                foreach ($desserts as $dessert) { ?>
-                <div class="col s12 m6 l4">
-                    <div class="card card_index">
-                        <div class="card-image">
-                            <img src="./assets/img/<?php echo $dessert['food_type']; ?>.jpg" alt="" height="300px">
-                            <span class="card-title black-text"><?php echo $dessert['food_name']; ?></span>
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green lighten-2 accent-4"><i class="material-icons prefix">add_shopping_cart</i></a>
-                        </div>
-                        <div class="card-content">
-                            <p><?php echo $drink['food_description']; ?></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="" class="green-text text-darken-3 order_link">Order Now</a>
+                            <a href="order.php?id=<?php echo $drink['food_id'] ?>" class="green-text text-darken-3 order_link"><i class="material-icons left">dinner_dining</i>Order now</a>
                         </div>
                     </div>
                 </div>

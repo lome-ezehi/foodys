@@ -1,6 +1,8 @@
 <?php
+include ('./templates/nav.php');
 include ('./templates/connect.php');
-include ('./templates/header.php');
+
+$wrong = '';
 
 if (isset($_POST['signup'])) {
     if ($_POST['password'] == $_POST['confirm_password']) {
@@ -16,18 +18,20 @@ if (isset($_POST['signup'])) {
         $send_query = mysqli_query($db_connect, $fetch_query);
 
         if ($send_query) {
-            header('Location: index.php');
+            session_start();
+            $_SESSION['username'] = $_POST['username'];
+            header('Location: landing_page.php');
             exit();
         }
-        }else {
-            $wrong = "Password are not the same";
+    }else {
+        $wrong = "Password are not the same";
     }
 }
 ?>
 
 <main>
     <div class="container white con-body">
-        <div class="container center-align">
+        <div class="container center-align signup_container">
             <h1>Signup</h1>
             <div class="row">
                 <div class="col l12">
@@ -58,7 +62,7 @@ if (isset($_POST['signup'])) {
                             <input type="password" name="confirm_password" id="confirm_password" placeholder="**********">
                         </div>
                         <span class="red-text left-align col l12" ><?php echo $wrong;?></span>
-                        <input type="submit" value="signup" name="signup" class="signup btn btn-large blue darken-4">
+                        <input type="submit" value="signup" name="signup" class="signup btn btn-large green accent-4">
                     </form>
                     <p>Already have an account? <a class="auth_link" href="login.php">LOGIN</a></p>
                 </div>

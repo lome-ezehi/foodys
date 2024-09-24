@@ -1,12 +1,12 @@
 <?php
+include ('./templates/nav.php');
 include ('./templates/connect.php');
-include ('./templates/header.php');
 
 session_start();
 $name = $_SESSION['username'];
 ?>
 <body>
-    <main class="lome">
+    <main class="landing_main">
         <div class="container center-align">
             <h1 class="center-align"><strong>Welcome, <?php echo $name; ?>.👏🏽</strong></h1>
         </div>
@@ -25,7 +25,7 @@ $name = $_SESSION['username'];
                     <div class="col l4">
                         <div class="card">
                             <div class="card-image">
-                                <img src="./assets/img/jollof.jpg" alt="Jollof Rice" >
+                                <img src="./assets/img/breakfast.jpg" alt="Jollof Rice" >
                             </div>
                             <div class="card-content">
                                 <h4>Jollof Rice</h4>

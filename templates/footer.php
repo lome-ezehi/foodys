@@ -3,12 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>             
+    <title>Foodys:></title>
+    <link rel="stylesheet" href="./assets/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>   
+        @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+        *{
+        font-family: 'Karla', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        }
+        .theme{
+            background-color: #00C853;
+        }
+        .name{
+            font-weight: bolder;
+        }
+        .nav_wrapper{
+            background-color: #f4f4f4 !important;
+        }
+        .more_details{
+            margin-bottom: 20px !important;
+        }
+        footer{
+            background-color: #f4f4f4 !important;
+            /* margin-bottom: 20px !important; */
+        }        
+        .new_wrapper{
+            padding-top: 25px !important;
+            padding-bottom: 50px !important;
+        }
+        .ed-btn{
+            margin: 20px;
+        }
+        .type{
+            font-size: 15px !important;
+        }
+        .r_name{
+        font-size: 17px;
+        font-weight: 600;
+        text-decoration: underline;
+        transition: ease-out .2s;
+        color: #00C853 !important;
+        }
+        .d_container{
+            /* background-color: red; */
+            padding-top: 15% !important;
+        }
+        .d_ul{
+            width: 300px !important;
+        }
+        .d_li{
+            width: 300px !important;
+        }
+        .d_link{
+        color: black;
+        font-size: 17px;
+        width: 300px !important;
+        text-align: left ;
+        background-color: #f4f4f4;
+        text-transform: none;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+        .d_link:hover{
+            box-shadow: 10px ;
+            background-color: #00C853;
+            color: #fff;
+            transition: .2s ease-out;
+        }
+        .logout{
+            width: 300px;
+            text-align: center;
+            background-color: #fff !important;
+            border-radius: 0 0 2px 2px !important;
+            padding: 12px 20px;
+            border: 1px solid rgba(160,160,160,0.2) !important;
+            position: relative;
+        }
+        .logoutBtn:hover{
+            color: #e57373  !important;
+            transition: ease-out.2s;
+            cursor: pointer;
+        }
+        .more{
+            background-color: #00C853;
+            margin-top: 20px;
+        }
+        .more:hover{
+            background-color: #00C853;
+        }
+        .heading{
+            text-decoration: underline;
+            font-size: 60px;
+            font-weight: bold;
+        }
+        body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        }
+        main{
+            flex: 1 0 auto;
+        }
+        .auth_link{
+            color: green;
+
+        }
+        .auth_link:hover{
+            font-weight: bold;
+            color: green;
+            text-decoration: underline;
+            transition: ease-out.2s;
+        }
         .hero h2 {
             font-size: 36px;
         }
-
         .hero p {
             font-size: 20px;
         }
@@ -20,34 +131,93 @@
             padding: 50px 0px;
             /* background-color: #f4f4f4; */
         }
-        .lome{
+        .landing_main{
             background-color: #f4f4f4;
         }
-        img{
-            background-color: white;
-        }
         .cat_link{
-            margin: 0 20px;
-            height: auto !important;
-            width: auto !important;
+            width: 100%;
+            height: auto;
         }
         .categories{
             padding: 30px 0;
         }
+        /* .ac:active{
+            background-color: red !important;
+        } */
         .order_link:hover{
             color: greenyellow !important;
         }
         .card_index{
-            height: 430px;
+            height: auto;
+            width: 100%;
         }
         .hidden {
             display: none;
         }
+        .account{
+            border: 1px solid black;
+            margin-top: 80px;
+            background-color: #f4f4f4;
+            width: 750px !important;
+            border-radius: 5px;
+        }
+        .order_container{
+            margin-top: 50px;
+            /* margin-left: 300px; */
+        }
+        .wrapper{
+            width: 80%;
+            font-size: 40px;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+        span.num{
+            font-size: 30px;
+            border-right: 2px solid rgba(0, 0, 0, 0.2);
+            border-left: 2px solid rgba(0, 0, 0, 0.2);
+            pointer-events: none;
+        }
+        span.cart{
+            font-size: 15px;
+            position: relative;
+            right: 30%;
+            top: 8%;
+            background-color: green;
+            color: white;
+            padding: 2px;
+            border-radius: 30%;
+            /* display: block; */
+        }
+        .nav_link:hover{
+            background-color: #00C853;
+            color: #fff !important;
+        }
+        span.cart:hover{
+            color: #fff !important;
+            background-color: green;
+        }
+        .card-image img{
+            background-color: #f4f4f4 !important;
+        }
+        .login_container{
+            margin-top: 100px !important;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 10px 10px 15px #aaaaaa;
+        }
+        .signup_container{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 10px 10px 15px #aaaaaa;
+        }
+        .order_btn{
+            background-color: #f4f4f4;
+        }
     </style>
 </head>
 <body>
-    <footer class="page-footer white">
-        <div class="divider"></div>
+    <div class="divider"></div>
+    <footer class="page-footer">
         <div class="container center-align">
             <h5 class="center-align black-text"><a href="./index.php" class="brand-logo black-text"><em>Föödys</em></a> &copy; 2024 </h5>
         </div>
@@ -69,6 +239,7 @@
             $('.dropdown-trigger').dropdown();
             $('select').formSelect();
             $('.fixed-action-btn').floatingActionButton();
+            $('.tooltipped').tooltip();
         })
     </script>
 </body>

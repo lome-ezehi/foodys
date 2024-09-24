@@ -1,18 +1,31 @@
 <?php
+include ('./templates/nav.php');
 include ('./templates/connect.php');
-include ('./templates/header.php');
 
-$food_name = $food_type = $food_description = " ";
+$food_name = $food_type = $food_description = $food_price = $image_name = " ";
 if (isset($_POST['submit'])) {
     $food_name = $_POST['food_name'];
     $food_description = $_POST['food_description'];
     $food_type = $_POST['food_type'];
+    $food_price = $_POST['food_price'];
+    // $quantity = $_POST['quantity'];
+    $image_name = $_FILES['upload_order']['name'];
 
-    $insert_query = "INSERT INTO `foodys_tb` (`food_type`, `food_name`, `food_description`) VALUES ('$food_type', '$food_name', '$food_description') ";
+    $insert_query = "INSERT INTO `foodys_tb` (`food_type`, `food_name`, `food_description`, `food_price`, `image_name`) VALUES ('$food_type', '$food_name', '$food_description', '$food_price', '$image_name') ";
+    
+    $send_query = mysqli_query($db_connect, $insert_query);
+
+    // print_r($send_query);
+
+
+    $target_directory = 'uploads';
+
+    $tmp_address = $_FILES['upload_order']['tmp_name'];
+
+    $upload_image = move_uploaded_file($tmp_address, "$target_directory/$image_name");
 
     // print_r($insert_query);
-    $send_query = mysqli_query($db_connect, $insert_query);
-    if ($send_query) {
+    if ($upload_image) {
         header('Location: index.php');
         exit();
     }
@@ -21,10 +34,15 @@ if (isset($_POST['submit'])) {
 <body>
     <main>
         <div class="container">
-            <h3 class="center-align">Insert order</h3>
+            <h3 class="center-align">Add Menu</h3>
             <div class="row">
-                <div class="col s12 m6 l12">
-                    <form action="./insert_order.php" method="post">
+                <div class="col l6">
+                    <div class="img_add">
+                        <img src="./assets/img/chef.jpg" width="100%" alt="">
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <form action="./insert_order.php" enctype="multipart/form-data" method="post">
                         <div class="col s12 m6 l12 input-field">
                             <label for="food_name">Name of meal:</label>
                             <input type="text" name="food_name" id="food_name">
@@ -43,10 +61,34 @@ if (isset($_POST['submit'])) {
                                 <option value="dessert">Dessert</option>
                             </select>
                         </div>
-                        <!-- <div class="col s12 m6 l12 input-field">
-                            <label for=""></label>
-                            <input type="text" name="" id="">
+                        <!-- <div class="col s12 m6 l12">
+                            <label for="quantity">Quantity:</label>
+                            <select name="quantity" id="quantity">
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                            </select>
                         </div> -->
+                        <div class="col s12 m6 l12 input-field">
+                            <label for="price">Price:</label>
+                            <input type="number" name="food_price" id="price">
+                        </div>
+                        <div class="col s12 m6 l12 file-field input-field">
+                            <div class="btn green accent-4">
+                                <span>Upload</span>
+                                <input type="file" name="upload_order">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input type="text" class="file-path validate">
+                            </div>
+                        </div>
                         <div class="col s12 m6 l12 input-field center-align">
                             <input type="submit" name="submit" value="Submit" class="btn green lighten-2 accent-4">
                         </div>
