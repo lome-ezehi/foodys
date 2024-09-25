@@ -2,6 +2,13 @@
 include('./templates/nav.php');
 include('./templates/connect.php');
 
+// session_start();
+if (isset($_POST['logout'])) {
+    session_destroy();
+    header('Location: login.php');
+    exit();
+}
+
 ?>
 
 <main>
@@ -13,9 +20,12 @@ include('./templates/connect.php');
                     <li class="d_li"><a class="btn d_link" href=""><i class="material-icons left">menu_book</i>Orders placed</a></li>
                     <li class="d_li"><a class="btn d_link" href=""><i class="material-icons left">contacts</i>Contact us</a></li>
                     <li class="d_li"><a class="btn d_link" href=""><i class="material-icons left">person</i>About us</a></li>
-                    <div class="logout center">
-                        <a><span class="logoutBtn red-text text-darken-4">LOGOUT</span></a>
-                    </div>
+                    <form action="./dashboard.php" method="post">
+                        <div class="logout center">
+                            <input type="submit" name="logout" value="logout" id="" class="red btn white-text darken-2">
+                        </div>
+
+                    </form>
                 </ul>
             </div>
         </div>

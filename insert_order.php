@@ -37,8 +37,8 @@ if (isset($_POST['submit'])) {
             <h3 class="center-align">Add Menu</h3>
             <div class="row">
                 <div class="col l6">
-                    <div class="img_add">
-                        <img src="./assets/img/chef.jpg" width="100%" alt="">
+                    <div class="img_add hide-on-med-and-down">
+                        <img src="./assets/img/chef.png" width="100%" alt="">
                     </div>
                 </div>
                 <div class="col s12 m6 l6">

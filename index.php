@@ -26,27 +26,28 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
 <body>
     <main>
         <div class="container">
-            <h3>All Categories</h3>
+            <h3 class="hide-on-med-and-down">All Categories</h3>
+            <h3 class="center-align hide-on-large-only">All Categories</h3>
             <div class="row">
-                <div class="col l2">
+                <div class="col l2 s12">
                     <a onclick="showCategory('dessert')" class="btn green center-align accent-4 cat_link">
                         <i class="material-icons left">cake</i>Dessert
                     </a>
                 </div>
                 <div class="col l1"></div>
-                <div class="col l2">
+                <div class="col l2 s12">
                     <a onclick="showCategory('breakfast')" class="btn green accent-4 center-align cat_link"><i class="material-icons left">free_breakfast</i>Breakfast</a>
                 </div>
-                <div class="col l2">
+                <div class="col l2 s12">
                     <a onclick="showCategory('lunch')" class="btn green accent-4 cat_link center-align"><i class="material-icons left">lunch_dining</i>Lunch</a>
                 </div>
-                <div class="col l2">
+                <div class="col l2 s12">
                     <a onclick="showCategory('dinner')" class="btn green accent-4 cat_link">
                         <i class="material-icons left">dinner_dining</i>Dinner
                     </a>
                 </div>
                 <div class="col l1"></div>
-                <div class="col l2">
+                <div class="col l2 s12">
                     <a onclick="showCategory('drink')" class="btn green accent-4 cat_link">
                         <i class="material-icons left">wine_bar</i>Drinks
                     </a>

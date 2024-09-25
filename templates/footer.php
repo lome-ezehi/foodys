@@ -137,6 +137,7 @@
         .cat_link{
             width: 100%;
             height: auto;
+            /* margin: 10px 0; */
         }
         .categories{
             padding: 30px 0;
@@ -240,6 +241,7 @@
             $('select').formSelect();
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
+            $('.sidenav').sidenav();
         })
     </script>
 </body>
