@@ -16,7 +16,18 @@
         font-weight: 400;
         }
         .theme{
-            background-color: #00C853;
+            background-color: #f4f4f4;
+        }
+        .dashed{
+            border-bottom: 2px dashed;
+            width: 15%;
+            text-align: center;
+            position: relative;
+            left: 42.5%;
+            margin-bottom: 30px;
+        }
+        .bold_text{
+            font-weight: bold;
         }
         .name{
             font-weight: bolder;
@@ -149,8 +160,20 @@
             color: greenyellow !important;
         }
         .card_index{
-            height: auto;
+            height: 400px;
             width: 100%;
+        }
+        /* .image{
+            height: 300px;
+        }
+        .content{
+            height: 100px;
+        }
+        .action{
+            height: 100px;
+        } */
+        .brand_logo{
+            margin-left: 20px;
         }
         .hidden {
             display: none;
@@ -163,7 +186,7 @@
             border-radius: 5px;
         }
         .order_container{
-            margin-top: 50px;
+            margin-top: 100px;
             /* margin-left: 300px; */
         }
         .wrapper{
@@ -189,9 +212,17 @@
             border-radius: 30%;
             /* display: block; */
         }
+        .nav_link{
+            transition: all.4s;
+        }
         .nav_link:hover{
-            background-color: #00C853;
-            color: #fff !important;
+            background-color: transparent;
+            color: #00C853 !important;
+            border-bottom: 2px solid #00C853;
+            height: auto !important;
+        }
+        .middle_nav{
+            margin-right: 330px;
         }
         span.cart:hover{
             color: #fff !important;
@@ -214,13 +245,60 @@
         .order_btn{
             background-color: #f4f4f4;
         }
+        .function_btn{
+            margin: 0 20px;
+        }
+        .input-field input:focus {
+            border-bottom: 1px solid #00C853 !important;
+            box-shadow: 0 1px 0 0 #00C853 !important;
+        }
+        label {
+            color: black !important;
+            font-weight: bold;
+            font-size: 15px !important;
+        }
+        .input-field .prefix.active, label.active{
+            color: #00C853 !important;
+        }
+        .cart_container{
+            padding: 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            /* padding-left: 80px; */
+            border: 1px solid black;
+        }
+        .cart_i{
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 2px dashed #00C853;
+        }
+        .quantity_input{
+            width: 9%;
+            text-align: end;
+            position: relative;
+            left: 93%;
+            display: inline-block;
+        }
+        .cart_food{
+            width: 50%;
+            position: relative;
+            right: 10%;
+            display: inline-block;
+        }
+        .place_order{
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
     <div class="divider"></div>
     <footer class="page-footer">
         <div class="container center-align">
-            <h5 class="center-align black-text"><a href="./index.php" class="brand-logo black-text"><em>Föödys</em></a> &copy; 2024 </h5>
+            <h5 class="center-align black-text"><a href="./index.php" class="brand-logo black-text"><em>F<span class="green-text text-accent-4">öö</span>dys</em></a> &copy; 2024 </h5>
         </div>
     </footer>
         
@@ -242,6 +320,7 @@
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
             $('.sidenav').sidenav();
+            $('.parallax').parallax();
         })
     </script>
 </body>

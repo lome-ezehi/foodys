@@ -3,11 +3,6 @@ include('./templates/nav.php');
 include('./templates/connect.php');
 
 // session_start();
-if (isset($_POST['logout'])) {
-    session_destroy();
-    header('Location: login.php');
-    exit();
-}
 
 ?>
 
@@ -26,6 +21,7 @@ if (isset($_POST['logout'])) {
                         </div>
 
                     </form>
+                    <a href="logout.php" class="btn">Logout</a>
                 </ul>
             </div>
         </div>

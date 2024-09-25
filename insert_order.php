@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
             <div class="row">
                 <div class="col l6">
                     <div class="img_add hide-on-med-and-down">
-                        <img src="./assets/img/chef.png" width="100%" alt="">
+                        <img src="./assets/img/chef.jpg" width="100%" alt="">
                     </div>
                 </div>
                 <div class="col s12 m6 l6">
@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
                             <input type="text" name="food_name" id="food_name">
                         </div>
                         <div class="col s12 m6 l12 input-field">
-                            <label for="food_description">Order Description</label>
+                            <label for="food_description">Order Description:</label>
                             <input type="text" name="food_description" id="food_description">
                         </div>
                         <div class="col s12 m6 l12">

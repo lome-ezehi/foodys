@@ -2,7 +2,7 @@
 include ('./templates/nav.php');
 include ('./templates/connect.php');
 
-session_start();
+
 $name = $_SESSION['username'];
 ?>
 <body>

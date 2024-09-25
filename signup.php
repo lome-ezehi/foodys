@@ -18,7 +18,6 @@ if (isset($_POST['signup'])) {
         $send_query = mysqli_query($db_connect, $fetch_query);
 
         if ($send_query) {
-            session_start();
             $_SESSION['username'] = $_POST['username'];
             header('Location: landing_page.php');
             exit();
