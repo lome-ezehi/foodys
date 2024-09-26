@@ -7,16 +7,16 @@ $username = $_SESSION['username'];
 
 <body>
     <header>
-        <nav class="nav_wrapper z-depth-0 navbar-fixed">
+        <nav class="nav_wrapper z-depth-0">
+            <ul class="sidenav hide-on-large-only" id="mobile-demo">
+                <li><a href="index.php"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="insert_order.php"><i class="material-icons left">menu_book</i>Add Menu</a></li>
+                <li><a href="cart.php"><i class="material-icons left">shopping_cart<span class="white-text cart">0</span></i>Cart</a></li>
+            </ul>
             <div class="nav-wrapper navbar-fixed">
-                <!-- sidenav -->
                 <a data-target="mobile-demo" class="sidenav-trigger hide-on-large-only black-text" href="#"><i class="material-icons">menu</i></a>
                 <!-- sidenav content -->
-                <ul class="sidenav hide-on-large-only" id="mobile-demo">
-                    <li><a href="index.php"><i class="material-icons left">home</i>Home</a></li>
-                    <li><a href="insert_order.php"><i class="material-icons left">menu_book</i>Add Menu</a></li>
-                    <li><a href="cart.php"><i class="material-icons left">shopping_cart<span class="white-text cart">0</span></i>Cart</a></li>
-                </ul>
+                <!-- sidenav -->
                 <!-- brand logo -->
                 <a href="index.php" class="brand-logo black-text brand_logo"><em>F<span class="green-text text-accent-4">öö</span>dys</em></a>
                 <!-- account  -->
@@ -32,8 +32,8 @@ $username = $_SESSION['username'];
                     ?></a></li>
                 </ul>
                 <!--desktop navbar  -->
-                <ul class="right">
-                    <li><a href="#!" class="nav_link black-text dropdown-trigger" data-target="dropdown1"><i class="material-icons left">person</i>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="nav_link black-text dropdown-trigger" data-target="dropdown1"><i class="material-icons left">person</i>
                     <?php 
                     echo $username;
                     ?>
@@ -47,7 +47,6 @@ $username = $_SESSION['username'];
                 </ul>
                 <!-- dropdown content -->
                 <ul id="dropdown1" class="dropdown-content">
-                    <li><a href="login.php" class="green-text"><i class="material-icons left">person</i>SIGN IN</a></li>
                     <li><a href="signup.php" class="green-text"><i class="material-icons left">person_add</i>SIGN UP</a></li>
                     <li><a href="dashboard.php" class="green-text"><i class="material-icons left">dashboard</i>Account</a></li>
                 </ul>

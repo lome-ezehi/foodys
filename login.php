@@ -236,7 +236,7 @@ if (isset($_POST['login'])) {
             background-color: #f4f4f4 !important;
         }
         .login_container{
-            margin-top: 100px !important;
+            margin-top: 200px !important;
             border: 2px solid rgba(0, 0, 0, 0.2);
             box-shadow: 10px 10px 15px #aaaaaa;
         }
@@ -252,36 +252,54 @@ if (isset($_POST['login'])) {
         .function_btn{
             margin: 0 20px;
         }
+        .input-field input:focus {
+            border-bottom: 1px solid #00C853 !important;
+            box-shadow: 0 1px 0 0 #00C853 !important;
+        }
+        label {
+            color: black !important;
+            font-weight: bold;
+            font-size: 15px !important;
+        }
+        .input-field .prefix.active, label.active{
+            color: #00C853 !important;
+        }
     </style>
 </head>
-<main>
-    <div class="container center-align">
-        <div class="container login_container">
-            <h1>Login</h1>
-            <div class="container">
-                <div class="row">
-                    <form action="login.php" method="POST">
-                        <div class="col l12 s12 input-field">
-                            <span class="red-text"><?php echo $error_msg; ?></span>
-                            <i class="material-icons prefix">person</i>
-                            <input type="text" name="username" id="username">
-                            <label for="username">Username:</label>
-                        </div>
-                        <div class="col l12 s12 input-field">
-                            <i class="material-icons prefix">lock</i>
-                            <input type="password" name="password" id="password">
-                            <label for="password">Password:</label>
-                        </div>
-                        <div class="col l12 s12 input-field center-align">
-                            <input type="submit" value="login" name="login" class="btn green darken-4 center-align">
-                        </div>
-                    </form>
-                    <!-- <p>Don't have an account? <a class="auth_link" href="signup.php">SIGNUP</a></p> -->
+<body>
+    <main>
+        <div class="container center-align">
+            <div class="container login_container">
+                <h1>Login</h1>
+                <div class="container">
+                    <div class="row">
+                        <span class="red-text"><?php echo $error_msg; ?></span>
+                        <form action="login.php" method="POST">
+                            <div class="col l12 s12 input-field">
+                                <i class="material-icons prefix">person</i>
+                                <input type="text" name="username" id="username" placeholder="e.g John">
+                                <label for="username">Username:</label>
+                            </div>
+                            <div class="col l12 s12 input-field">
+                                <i class="material-icons prefix">lock</i>
+                                <input type="password" name="password" id="password" placeholder="e.g 1234">
+                                <label for="password">Password:</label>
+                            </div>
+                            <div class="col l12 s12 input-field center-align">
+                                <input type="submit" value="login" name="login" class="btn green darken-4 center-align">
+                            </div>
+                        </form>
+                        <!-- <p>Don't have an account? <a class="auth_link" href="signup.php">SIGNUP</a></p> -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/jqueryv3.4.1.js"></script>
+    <script src="./assets/js/materialize.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
 
 <?php
 // include('./templates/footer.php');

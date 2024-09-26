@@ -275,22 +275,42 @@
             margin-bottom: 20px;
             border: 2px dashed #00C853;
         }
-        .quantity_input{
-            width: 9%;
-            text-align: end;
-            position: relative;
-            left: 93%;
-            display: inline-block;
+        .delete_cart:hover{
+            background-color: transparent;
+        }
+        .order_card{
+            border: 2px solid black;
+        }
+        .order_image{
+            width: 400px;
+            border-right: 2px solid rgba(0, 0, 0, 0.2);
+            padding: 100px 0;
+        }
+        .divider_cart{
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
         .cart_food{
-            width: 50%;
+            margin-top: 20px;
+        }
+        .quantity_input{
+            margin-top: 10px;
+        }
+        .delete_cart{
             position: relative;
-            right: 10%;
-            display: inline-block;
+            margin-top: 10px;
+            border-radius: 20px;
         }
         .place_order{
-            margin-top: 10px;
-            margin-bottom: 30px;
+            text-align: center;
+        }
+        .clear_btn{
+            /* margin: 0 20px; */
+            margin: 10px;
+        }
+        .card_image{
+            border-right: 2px black solid;
+            text-align: center;
         }
     </style>
 </head>

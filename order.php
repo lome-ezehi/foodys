@@ -37,7 +37,19 @@ if (isset($_POST['add_to_cart'])) {
         }
     }
 }
+if (isset($_POST["delete_menu"])) {
+    $delete_id = $_GET['id'];
+    
+    $delete_query = "DELETE FROM `foodys_tb` WHERE `food_id` = $id";
+    // echo $delete_query;
+    $send_delete_query = mysqli_query($db_connect, $delete_query);
 
+    if ($send_delete_query) {
+        header('Location: meals.php');
+        exit();
+    }
+    // $order = mysqli_fetch_assoc($send_query);
+}
 ?>
 
 <body>
@@ -45,11 +57,11 @@ if (isset($_POST['add_to_cart'])) {
         <div class="container order_container">
             <div class="col s12 m7">
                 <form action="order.php?id=<?php echo $id; ?>" method="post">
-                    <div class="card horizontal large order_card">
-                        <div class="card-image">
+                    <div class="card horizontal large order_card theme">
+                        <div class="card_image theme">
                             <img src="./uploads/<?php echo $order['image_name']; ?>" width="100%">
                         </div>
-                        <div class="card-stacked theme">
+                        <div class="card-stacked">
                             <div class="card-content">
                                 <h2 class="black-text"><?php echo $order['food_name']; ?></h2>
                                 <div class="divider"></div>
@@ -60,12 +72,11 @@ if (isset($_POST['add_to_cart'])) {
                                         <label class="black-text" for="quantity">Quantity:</label>
                                     </div>
                                 </div>
-                                <!-- <h5 class="black-text">Price Total: ₦<?php echo $food_price * (isset($quantity) ? $quantity : 1); ?></h5> -->
                             </div>
                             <div class="card-action">
                                 <input type="submit" name="add_to_cart" value="Add to cart" class="btn black-text order_btn">
-                                <a href="delete_function.php?id=<?php echo $order['food_id']; ?>" class="btn red right white-text function_btn">Delete</a>
-                                <a href="edit_function.php?id=<?php echo $order['food_id']; ?>" class="btn blue right white-text function_btn">Edit</a>
+                                <input type="submit" name="delete_menu" value="Delete" class="btn red right white-text function_btn">
+                                <input type="submit" class="btn blue right white-text function_btn" value="Edit">
                             </div>
                         </div>
                     </div>
