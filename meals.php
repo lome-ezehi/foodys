@@ -62,14 +62,16 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                 <?php
                 foreach ($desserts as $dessert) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card hoverable card_index">
+                    <div class="card hoverable card_index medium">
                         <div class="card-image">
                             <img src="./uploads/<?php echo $dessert['image_name']; ?>" alt="" >
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                         </div>
-                        <div class="card-content content">
-                            <span class="card-title black-text"><?php echo $dessert['food_name']; ?></span>
+                        <div class="card-content content content">
+                            <span class="meal_font black-text"><?php echo $dessert['food_name']; ?></span>
                             <p>₦<?php echo $dessert['food_price']; ?></p>
+                            <div>
+                                <a href="" class="favorite btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
+                            </div>
                         </div>
                         <div class="card-action">
                             <a href="order.php?id=<?php echo $dessert['food_id'] ?>" class="green-text text-darken-3 order_link"><i class="material-icons left">dinner_dining</i>Order now</a>
@@ -86,14 +88,16 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
             <div class="row">
                 <?php foreach ($breakfasts as $breakfast) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card hoverable card_index">
+                    <div class="card hoverable card_index medium">
                         <div class="card-image">
                             <img src="./uploads/<?php echo $breakfast['image_name']; ?>" alt="">
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                         </div>
                         <div class="card-content content">
-                            <span class="card-title black-text"><?php echo $breakfast['food_name']; ?></span>
-                            <p class="black-text">₦<?php echo $breakfast['food_price']; ?></p>
+                            <span class="meal_font black-text"><?php echo $breakfast['food_name']; ?></span>
+                            <p>₦<?php echo $breakfast['food_price']; ?></p>
+                            <div>
+                                <a href="" class="favorite btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
+                            </div>
                         </div>
                         <div class="card-action">
                             <a href="order.php?id=<?php echo $breakfast['food_id'] ?>" class="green-text text-darken-3 order_link"><i class="material-icons left">dinner_dining</i>Order now</a>
@@ -111,14 +115,16 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                 <?php
                 foreach ($lunchs as $lunch) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card hoverable card_index">
+                    <div class="card hoverable card_index medium">
                         <div class="card-image">
                             <img src="./uploads/<?php echo $lunch['image_name']; ?>" alt="" >
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                         </div>
-                        <div class="card-content">
-                            <span class="card-title black-text"><?php echo $lunch['food_name']; ?></span>
+                        <div class="card-content content">
+                            <span class="meal_font black-text"><?php echo $lunch['food_name']; ?></span>
                             <p>₦<?php echo $lunch['food_price']; ?></p>
+                            <div>
+                                <a href="" class="favorite btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
+                            </div>
                         </div>
                         <div class="card-action">
                             <a href="order.php?id=<?php echo $lunch['food_id'] ?>" class="green-text text-darken-3 order_link"><i class="material-icons left">dinner_dining</i>Order now</a>
@@ -136,14 +142,16 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                 <?php
                 foreach ($dinners as $dinner) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card hoverable card_index">
+                    <div class="card hoverable card_index medium">
                         <div class="card-image">
                             <img src="./uploads/<?php echo $dinner['image_name']; ?>" alt="" >
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                         </div>
-                        <div class="card-content">
-                            <span class="card-title black-text"><?php echo $dinner['food_name']; ?></span>
+                        <div class="card-content content">
+                            <span class="meal_font black-text"><?php echo $dinner['food_name']; ?></span>
                             <p>₦<?php echo $dinner['food_price']; ?></p>
+                            <div>
+                                <a href="" class="favorite btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
+                            </div>
                         </div>
                         <div class="card-action">
                             <a href="order.php?id=<?php echo $dinner['food_id'] ?>" class="green-text text-darken-3 order_link"><i class="material-icons left">dinner_dining</i>Order now</a>
@@ -161,14 +169,16 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                 <?php
                 foreach ($drinks as $drink) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card hoverable card_index">
+                    <div class="card hoverable card_index medium">
                         <div class="card-image">
                             <img src="./uploads/<?php echo $drink['image_name']; ?>" alt="" >
-                            <a href="" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                         </div>
-                        <div class="card-content">
-                            <span class="card-title black-text"><?php echo $drink['food_name']; ?></span>
+                        <div class="card-content content">
+                            <span class="meal_font black-text"><?php echo $drink['food_name']; ?></span>
                             <p><?php echo $drink['food_price']; ?></p>
+                            <div>
+                                <a href="" class="favorite btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
+                            </div>
                         </div>
                         <div class="card-action">
                             <a href="order.php?id=<?php echo $drink['food_id'] ?>" class="green-text text-darken-3 order_link"><i class="material-icons left">dinner_dining</i>Order now</a>

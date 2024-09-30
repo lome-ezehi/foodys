@@ -18,13 +18,29 @@
         .theme{
             background-color: #f4f4f4;
         }
-        .dashed{
-            border-bottom: 2px dashed;
-            width: 15%;
+        .cart{
             text-align: center;
-            position: relative;
-            left: 42.5%;
-            margin-bottom: 30px;
+        }
+        .add_cart{
+            font-size: 20px;
+            padding-top: 20px;
+        }
+        .add_cart a:hover{
+            color: green !important;
+        }
+        .cart_img{
+            text-align: center;
+            padding: 20px 10px;
+        }
+        .dashed{
+            display: inline;
+            border-bottom: 2px dashed black;
+            /* margin-bottom: 30px; */
+        }
+        .solid{
+            display: inline;
+            border-bottom: 2px solid;
+            /* margin-bottom: 30px; */
         }
         .bold_text{
             font-weight: bold;
@@ -160,18 +176,21 @@
             color: greenyellow !important;
         }
         .card_index{
-            height: 400px;
+            /* height: 380px; */
             width: 100%;
         }
-        /* .image{
-            height: 300px;
-        }
         .content{
-            height: 100px;
+            position: relative !important;
         }
-        .action{
-            height: 100px;
-        } */
+        .favorite{
+            position: absolute !important;
+            top: 10%;
+            left: 86.6%;
+        }
+        .meal_font{
+            font-size: 20px;
+            font-weight: bold;
+        }
         .brand_logo{
             margin-left: 20px;
         }
@@ -222,7 +241,7 @@
             height: auto !important;
         }
         .middle_nav{
-            margin-right: 330px;
+            margin-left: 330px;
         }
         span.cart:hover{
             color: #fff !important;
@@ -254,7 +273,7 @@
         }
         label {
             color: black !important;
-            font-weight: bold;
+            /* font-weight: bold; */
             font-size: 15px !important;
         }
         .input-field .prefix.active, label.active{
@@ -262,8 +281,7 @@
         }
         .cart_container{
             padding: 20px;
-            margin-top: 40px;
-            margin-bottom: 40px;
+            margin-top: 5%;
             /* padding-left: 80px; */
             border: 1px solid black;
         }
@@ -273,7 +291,7 @@
             padding: 20px;
             margin-top: 20px;
             margin-bottom: 20px;
-            border: 2px dashed #00C853;
+            border: 2px solid #00C853;
         }
         .delete_cart:hover{
             background-color: transparent;
@@ -311,6 +329,29 @@
         .card_image{
             border-right: 2px black solid;
             text-align: center;
+            width: 400px;
+            position: relative;
+            /* display: flex; */
+        }
+        .card_image img{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* width: 400px; */
+        }
+        .order_placed{
+            /* padding: 20px 10px; */
+            border: 2px solid black;
+            border-radius: 5px;
+            /* margin: 20px 10px; */
+        }
+        .total_price{
+            padding: 30px 0;
+        }
+        .orders_head{
+            margin-top: 100px;
         }
     </style>
 </head>
@@ -321,7 +362,7 @@
             <h5 class="center-align black-text"><a href="./index.php" class="brand-logo black-text"><em>F<span class="green-text text-accent-4">öö</span>dys</em></a> &copy; 2024 </h5>
         </div>
     </footer>
-        
+
     <!-- JS Scripts Below -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/jqueryv3.4.1.js"></script>

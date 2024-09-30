@@ -59,7 +59,7 @@ if (isset($_POST["delete_menu"])) {
                 <form action="order.php?id=<?php echo $id; ?>" method="post">
                     <div class="card horizontal large order_card theme">
                         <div class="card_image theme">
-                            <img src="./uploads/<?php echo $order['image_name']; ?>" width="100%">
+                            <img src="./uploads/<?php echo $order['image_name']; ?>">
                         </div>
                         <div class="card-stacked">
                             <div class="card-content">
@@ -74,7 +74,7 @@ if (isset($_POST["delete_menu"])) {
                                 </div>
                             </div>
                             <div class="card-action">
-                                <input type="submit" name="add_to_cart" value="Add to cart" class="btn black-text order_btn">
+                                <button type="submit" id="addCart" name="add_to_cart" class="btn black-text order_btn">Add to Cart</button>
                                 <input type="submit" name="delete_menu" value="Delete" class="btn red right white-text function_btn">
                                 <input type="submit" class="btn blue right white-text function_btn" value="Edit">
                             </div>
@@ -83,15 +83,9 @@ if (isset($_POST["delete_menu"])) {
                 </form>
             </div>
         </div>
+        <!-- <span id="mySpan">0</span> -->
     </main>
-</body>
 <?php
 include ('./templates/footer.php');
 ?>
-
-<!-- <?php echo $order['food_price'] * $order['food_quantity'] ?> -->
-<!-- <?php echo $order['food_quantity'] ?> -->
-
-<!-- <span class="wrapper minus">-</span>
-    <span class="wrapper num">01</span>
-    <span class="wrapper plus">+</span> -->
+</body>

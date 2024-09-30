@@ -29,3 +29,17 @@
 //         }
 //     });
 // });
+
+
+// const mySpan = document.getElementById("mySpan");
+// const addCart = document.getElementById("addCart");
+
+// let count = 0;
+// addCart.onclick = function () {
+//     count++;
+//     mySpan.textContent = count;
+// }
+
+// const quantity = document.getElementById("quantity");
+
+// console.log(quantity.textContent);

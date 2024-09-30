@@ -44,15 +44,18 @@ if (isset($_POST['submit'])) {
                 <div class="col s12 m6 l6">
                     <form action="./insert_order.php" enctype="multipart/form-data" method="post">
                         <div class="col s12 m6 l12 input-field">
+                            <i class="material-icons prefix">person</i>
                             <label for="food_name">Name of meal:</label>
                             <input type="text" name="food_name" id="food_name">
                         </div>
                         <div class="col s12 m6 l12 input-field">
+                            <i class="material-icons prefix">person</i>
                             <label for="food_description">Order Description:</label>
                             <input type="text" name="food_description" id="food_description">
                         </div>
-                        <div class="col s12 m6 l12">
+                        <div class="col s12 m6 l10 ">
                             <label for="food_type">Food type:</label>
+                            <!-- <i class="material-icons left">person</i> -->
                             <select name="food_type" id="food_type">
                                 <option value="breakfast">Breakfast</option>
                                 <option value="lunch">Lunch</option>
@@ -61,22 +64,8 @@ if (isset($_POST['submit'])) {
                                 <option value="dessert">Dessert</option>
                             </select>
                         </div>
-                        <!-- <div class="col s12 m6 l12">
-                            <label for="quantity">Quantity:</label>
-                            <select name="quantity" id="quantity">
-                                <option value="">01</option>
-                                <option value="">02</option>
-                                <option value="">03</option>
-                                <option value="">04</option>
-                                <option value="">05</option>
-                                <option value="">06</option>
-                                <option value="">07</option>
-                                <option value="">08</option>
-                                <option value="">09</option>
-                                <option value="">10</option>
-                            </select>
-                        </div> -->
                         <div class="col s12 m6 l12 input-field">
+                            <i class="material-icons prefix">person</i>
                             <label for="price">Price:</label>
                             <input type="number" name="food_price" id="price">
                         </div>
