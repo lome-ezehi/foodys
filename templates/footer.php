@@ -192,7 +192,7 @@
             font-weight: bold;
         }
         .brand_logo{
-            /* margin-left: 20px; */
+            margin-left: 20px;
         }
         .hidden {
             display: none;
@@ -240,13 +240,8 @@
             border-bottom: 2px solid #00C853;
             height: auto !important;
         }
-        .brand_logo{
-            font-size: 30px;
-        }
         .middle_nav{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            margin-left: 330px;
         }
         span.cart:hover{
             color: #fff !important;
