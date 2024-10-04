@@ -18,11 +18,6 @@ print_r($receipts);
                     <li class="d_li"><a class="btn d_link" href=""><i class="material-icons left">menu_book</i>Orders placed</a></li>
                     <li class="d_li"><a class="btn d_link" href=""><i class="material-icons left">contacts</i>Contact us</a></li>
                     <li class="d_li"><a class="btn d_link" href=""><i class="material-icons left">person</i>About us</a></li>
-                    <form action="./dashboard.php" method="post">
-                        <div class="logout center">
-                            <a href="logout.php" class="red-text text-darken-4 btn red lighten-3">Logout</a>
-                        </div>
-                    </form>
                 </ul>
             </div>
         </div>

@@ -48,8 +48,9 @@
         .name{
             font-weight: bolder;
         }
-        .nav_wrapper{
+        .nav-wrapper{
             background-color: #f4f4f4 !important;
+            margin: 0 20px !important;
         }
         .more_details{
             margin-bottom: 20px !important;
@@ -220,7 +221,7 @@
             border-left: 2px solid rgba(0, 0, 0, 0.2);
             pointer-events: none;
         }
-        span.cart{
+        /* span.cart{
             font-size: 15px;
             position: relative;
             right: 30%;
@@ -229,8 +230,8 @@
             color: white;
             padding: 2px;
             border-radius: 30%;
-            /* display: block; */
-        }
+            display: block;
+        } */
         .nav_link{
             transition: all.4s;
         }
@@ -379,7 +380,7 @@
             $('.dropdown-trigger').dropdown();
             $('select').formSelect();
             $('.fixed-action-btn').floatingActionButton();
-            $('.tooltipped').tooltip();
+            // $('.tooltipped').tooltip();
             $('.sidenav').sidenav();
             $('.parallax').parallax();
         })

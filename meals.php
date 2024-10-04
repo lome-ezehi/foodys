@@ -68,7 +68,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                         </div>
                         <div class="card-content content content">
                             <span class="meal_font black-text"><?php echo $dessert['food_name']; ?></span>
-                            <p>₦<?php echo $dessert['food_price']; ?></p>
+                            <p>₦<?php echo number_format($dessert['food_price'], 2); ?></p>
                             <div>
                                 <a href="" class="favorite btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                             </div>
@@ -94,7 +94,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                         </div>
                         <div class="card-content content">
                             <span class="meal_font black-text"><?php echo $breakfast['food_name']; ?></span>
-                            <p>₦<?php echo $breakfast['food_price']; ?></p>
+                            <p>₦<?php echo number_format($breakfast['food_price'], 2); ?></p>
                             <div>
                                 <a href="" class="favorite btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                             </div>
@@ -121,7 +121,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                         </div>
                         <div class="card-content content">
                             <span class="meal_font black-text"><?php echo $lunch['food_name']; ?></span>
-                            <p>₦<?php echo $lunch['food_price']; ?></p>
+                            <p>₦<?php echo number_format($lunch['food_price'], 2); ?></p>
                             <div>
                                 <a href="" class="favorite btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                             </div>
@@ -148,7 +148,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                         </div>
                         <div class="card-content content">
                             <span class="meal_font black-text"><?php echo $dinner['food_name']; ?></span>
-                            <p>₦<?php echo $dinner['food_price']; ?></p>
+                            <p>₦<?php echo number_format($dinner['food_price'], 2); ?></p>
                             <div>
                                 <a href="" class="favorite btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                             </div>
@@ -175,7 +175,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                         </div>
                         <div class="card-content content">
                             <span class="meal_font black-text"><?php echo $drink['food_name']; ?></span>
-                            <p><?php echo $drink['food_price']; ?></p>
+                            <p><?php echo '₦' . number_format($drink['food_price'], 2); ?></p>
                             <div>
                                 <a href="" class="favorite btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons prefix">favorite_outline</i></a>
                             </div>
@@ -192,7 +192,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
     <script>
         function showCategory(category) {
             // Hide all categories first
-            var categories = document.querySelectorAll('.container.categories');
+            let categories = document.querySelectorAll('.container.categories');
             categories.forEach(function(cat) {
                 cat.classList.add('hidden');
             });
