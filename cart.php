@@ -130,12 +130,12 @@ if (isset($_POST["clear_cart"])) {
                                 <input type="submit" value="clear order" name="clear_cart" class="clear_btn btn red-text text-darken-4 red lighten-3">
                             </div>
                             <div class="add_cart center-align">
-                                <a href="meals.php" class="green-text text-accent-4">Add to cart</a>
+                                <a href="menu.php" class="green-text text-accent-4">Add to cart</a>
                             </div>
                         </form>
                         <?php }else {
                             echo "<div class='cart_img'> <img src='./assets/img/cart.jpg' width='200px' alt=''> </div>";
-                            echo "<p class='center-align'>Cart is empty. <a href='meals.php' class='green-text'>Order now</a></p>";
+                            echo "<p class='center-align'>Cart is empty. <a href='menu.php' class='green-text'>Order now</a></p>";
                         } ?>
                     </div>
                 </div>

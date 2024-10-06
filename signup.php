@@ -63,7 +63,6 @@ if (isset($_POST['signup'])) {
                         <span class="red-text left-align col l12" ><?php echo $wrong;?></span>
                         <input type="submit" value="signup" name="signup" class="signup btn btn-large green accent-4">
                     </form>
-                    <p>Already have an account? <a class="auth_link" href="login.php">LOGIN</a></p>
                 </div>
             </div>
         </div>

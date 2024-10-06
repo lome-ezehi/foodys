@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
 
     // print_r($insert_query);
     if ($upload_image) {
-        header('Location: index.php');
+        header('Location: menu.php');
         exit();
     }
 }

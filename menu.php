@@ -62,11 +62,11 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                 <?php
                 foreach ($desserts as $dessert) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card hoverable card_index medium">
+                    <div class="card menu hoverable card_index">
                         <div class="card-image">
                             <img src="./uploads/<?php echo $dessert['image_name']; ?>" alt="" >
                         </div>
-                        <div class="card-content content content">
+                        <div class="card-content content">
                             <span class="meal_font black-text"><?php echo $dessert['food_name']; ?></span>
                             <p>₦<?php echo number_format($dessert['food_price'], 2); ?></p>
                             <div>
@@ -88,7 +88,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
             <div class="row">
                 <?php foreach ($breakfasts as $breakfast) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card hoverable card_index medium">
+                    <div class="card menu hoverable card_index">
                         <div class="card-image">
                             <img src="./uploads/<?php echo $breakfast['image_name']; ?>" alt="">
                         </div>
@@ -115,7 +115,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                 <?php
                 foreach ($lunchs as $lunch) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card hoverable card_index medium">
+                    <div class="card menu hoverable card_index">
                         <div class="card-image">
                             <img src="./uploads/<?php echo $lunch['image_name']; ?>" alt="" >
                         </div>
@@ -142,7 +142,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                 <?php
                 foreach ($dinners as $dinner) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card hoverable card_index medium">
+                    <div class="card menu hoverable card_index">
                         <div class="card-image">
                             <img src="./uploads/<?php echo $dinner['image_name']; ?>" alt="" >
                         </div>
@@ -169,7 +169,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
                 <?php
                 foreach ($drinks as $drink) { ?>
                 <div class="col s12 m6 l4">
-                    <div class="card hoverable card_index medium">
+                    <div class="card menu hoverable card_index">
                         <div class="card-image">
                             <img src="./uploads/<?php echo $drink['image_name']; ?>" alt="" >
                         </div>

@@ -86,7 +86,7 @@ if (isset($_POST['login'])) {
                         <form action="login.php" method="POST">
                             <div class="col l12 s12 input-field">
                                 <i class="material-icons prefix">person</i>
-                                <input type="text" name="username" id="username">
+                                <input style="text-transform: capitalize;" type="text" name="username" id="username">
                                 <label for="username">Username:</label>
                             </div>
                             <div class="col l12 s12 input-field">

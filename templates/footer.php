@@ -18,6 +18,12 @@
         .theme{
             background-color: #f4f4f4;
         }
+        .small{
+            font-size: 20px;
+        }
+        .big{
+            font-size: 30px;
+        }
         .cart{
             text-align: center;
         }
@@ -35,12 +41,10 @@
         .dashed{
             display: inline;
             border-bottom: 2px dashed black;
-            /* margin-bottom: 30px; */
         }
         .solid{
             display: inline;
             border-bottom: 2px solid;
-            /* margin-bottom: 30px; */
         }
         .bold_text{
             font-weight: bold;
@@ -57,7 +61,6 @@
         }
         footer{
             background-color: #f4f4f4 !important;
-            /* margin-bottom: 20px !important; */
         }        
         .new_wrapper{
             padding-top: 25px !important;
@@ -77,7 +80,6 @@
         color: #00C853 !important;
         }
         .d_container{
-            /* background-color: red; */
             padding-top: 15% !important;
         }
         .d_ul{
@@ -87,13 +89,22 @@
             width: 300px !important;
         }
         .d_link{
-        color: black;
-        font-size: 17px;
-        width: 300px !important;
-        text-align: left ;
-        background-color: #f4f4f4;
-        text-transform: none;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+            color: black;
+            font-size: 17px;
+            width: 300px !important;
+            text-align: left ;
+            background-color: #f4f4f4;
+            text-transform: none;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+        .d_btn{
+            width: 300px;
+            text-align: center;
+            background-color: #fff !important;
+            border-radius: 0 0 2px 2px !important;
+            padding: 12px 20px;
+            border: 1px solid rgba(160,160,160,0.2) !important;
+            position: relative;
         }
         .d_link:hover{
             box-shadow: 10px ;
@@ -135,15 +146,12 @@
         main{
             flex: 1 0 auto;
         }
-        .auth_link{
-            color: green;
-
-        }
-        .auth_link:hover{
-            font-weight: bold;
-            color: green;
-            text-decoration: underline;
-            transition: ease-out.2s;
+        .image_container{
+            background-color: #fff;
+            height: auto !important;
+            width: 200px;
+            display: inline-block;
+            text-align: center;
         }
         .hero h2 {
             font-size: 36px;
@@ -157,7 +165,6 @@
         .featured_menu {
             text-align: center;
             padding: 50px 0px;
-            /* background-color: #f4f4f4; */
         }
         .landing_main{
             background-color: #f4f4f4;
@@ -165,35 +172,21 @@
         .cat_link{
             width: 100%;
             height: auto;
-            /* margin: 10px 0; */
         }
         .categories{
             padding: 30px 0;
         }
-        /* .ac:active{
-            background-color: red !important;
-        } */
         .order_link:hover{
             color: greenyellow !important;
         }
-        .card_index{
-            /* height: 380px; */
-            width: 100%;
-        }
-        .content{
-            position: relative !important;
-        }
         .favorite{
             position: absolute !important;
-            top: 10%;
-            left: 86.6%;
+            top: 66%;
+            left: 84%;
         }
         .meal_font{
             font-size: 20px;
             font-weight: bold;
-        }
-        .brand_logo{
-            margin-left: 20px;
         }
         .hidden {
             display: none;
@@ -201,13 +194,13 @@
         .account{
             border: 1px solid black;
             margin-top: 80px;
+            margin-bottom: 50px;
             background-color: #f4f4f4;
             width: 750px !important;
             border-radius: 5px;
         }
         .order_container{
             margin-top: 100px;
-            /* margin-left: 300px; */
         }
         .wrapper{
             width: 80%;
@@ -221,17 +214,6 @@
             border-left: 2px solid rgba(0, 0, 0, 0.2);
             pointer-events: none;
         }
-        /* span.cart{
-            font-size: 15px;
-            position: relative;
-            right: 30%;
-            top: 8%;
-            background-color: green;
-            color: white;
-            padding: 2px;
-            border-radius: 30%;
-            display: block;
-        } */
         .nav_link{
             transition: all.4s;
         }
@@ -239,17 +221,35 @@
             background-color: transparent;
             color: #00C853 !important;
             border-bottom: 2px solid #00C853;
-            height: auto !important;
+            height: 64px !important;
         }
-        .middle_nav{
-            margin-left: 330px;
+        .brand_logo{
+            font-size: 30px;
+        }
+        .center_nav{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         span.cart:hover{
             color: #fff !important;
             background-color: green;
         }
+        .card_index{
+            height: 480px;
+        }
         .card-image img{
             background-color: #f4f4f4 !important;
+            height: 300px !important;
+            width: 320px !important;
+        }
+        .card.menu{
+            width: 320px !important;
+        }
+        .card-content.content{
+            width: 300px !important;
+            height: 120px !important;
         }
         .login_container{
             margin-top: 100px !important;
@@ -274,7 +274,6 @@
         }
         label {
             color: black !important;
-            /* font-weight: bold; */
             font-size: 15px !important;
         }
         .input-field .prefix.active, label.active{
@@ -283,7 +282,6 @@
         .cart_container{
             padding: 20px;
             margin-top: 5%;
-            /* padding-left: 80px; */
             border: 1px solid black;
         }
         .cart_i{
@@ -324,7 +322,6 @@
             text-align: center;
         }
         .clear_btn{
-            /* margin: 0 20px; */
             margin: 10px;
         }
         .card_image{
@@ -332,7 +329,6 @@
             text-align: center;
             width: 400px;
             position: relative;
-            /* display: flex; */
         }
         .card_image img{
             width: 100%;
@@ -340,19 +336,33 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            /* width: 400px; */
         }
         .order_placed{
-            /* padding: 20px 10px; */
             border: 2px solid black;
             border-radius: 5px;
-            /* margin: 20px 10px; */
         }
         .total_price{
             padding: 30px 0;
         }
         .orders_head{
             margin-top: 100px;
+        }
+        .text-parallel{
+            position: absolute;
+            left: 70%;
+        }
+        .green-fork{
+            width: 100px;
+            rotate: 90deg;
+        }
+        .index_btn1{
+            padding-top: 15px;
+        }
+        .index_btn{
+            padding-top: 30px;
+        }
+        .account_btn{
+            margin: 20px 16px;
         }
     </style>
 </head>

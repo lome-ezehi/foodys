@@ -45,7 +45,7 @@ if (isset($_POST["delete_menu"])) {
     $send_delete_query = mysqli_query($db_connect, $delete_query);
 
     if ($send_delete_query) {
-        header('Location: meals.php');
+        header('Location: menu.php');
         exit();
     }
     // $order = mysqli_fetch_assoc($send_query);
@@ -63,9 +63,10 @@ if (isset($_POST["delete_menu"])) {
                         </div>
                         <div class="card-stacked">
                             <div class="card-content">
-                                <h2 class="black-text"><?php echo $order['food_name']; ?></h2>
-                                <div class="divider"></div>
-                                <h5 class="black-text">Price: ₦<?php echo $order['food_price']; ?></h5>
+                                <h3 class="black-text bold_text"><?php echo $order['food_name']; ?></h3>
+                                <div class="divider black"></div>
+                                <h6 class="grey-text text-darken-2"><?php echo $order['food_description']; ?></h6>
+                                <h5 class="green-text text-accent-4">₦<?php echo $order['food_price']; ?></h5>
                                 <div class="row">
                                     <div class="col l4 input-field">
                                         <input type="number" name="quantity" id="quantity" value="1">
@@ -75,8 +76,8 @@ if (isset($_POST["delete_menu"])) {
                             </div>
                             <div class="card-action">
                                 <button type="submit" id="addCart" name="add_to_cart" class="btn black-text order_btn">Add to Cart</button>
-                                <input type="submit" name="delete_menu" value="Delete" class="btn red right white-text function_btn">
-                                <input type="submit" class="btn blue right white-text function_btn" value="Edit">
+                                <input type="submit" name="delete_menu" value="Delete from Menu" class="btn red right white-text function_btn">
+                                <!-- <a href="edit_function.php?food_id=<?php echo $id; ?>" class="btn blue right white-text function_btn" >Edit</a> -->
                             </div>
                         </div>
                     </div>
