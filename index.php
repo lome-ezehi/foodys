@@ -70,7 +70,7 @@ $username = $_SESSION['username'];
                         Föödys is an in-house restaurant management platform created with one goal in mind: to revolutionize how restaurant staff manage orders and collaborate. In today’s fast-paced restaurant environments, efficiency and accuracy are key to maintaining high customer satisfaction.
                     </h6>
                     <div class="left-align index_btn">
-                        <a href="" class="white-text btn btn-large waves-effect green accent-4">Learn more</a>
+                        <a href="dashboard.php#about" class="white-text btn btn-large waves-effect green accent-4">Learn more</a>
                     </div>
                 </div>
             </div>

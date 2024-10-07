@@ -21,7 +21,7 @@ if (isset($_POST['login'])) {
         // login details contains the table details in the form of an associative array
         $login_details = mysqli_fetch_assoc($send_query);
         // checks if password is correct
-        if ($login_details['password'] === $password) {
+        if ($login_details['password'] === $_POST['password']) {
             $_SESSION['username'] = $_POST['username'];
             header('Location: index.php');
             exit();

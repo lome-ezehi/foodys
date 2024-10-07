@@ -25,7 +25,7 @@ $name = $_SESSION['username'];
                     <div class="col l4">
                         <div class="card">
                             <div class="card-image">
-                                <img src="./assets/img/breakfast.jpg" alt="Jollof Rice" >
+                                <img src="./uploads/jollof-rice.png" alt="Jollof Rice" >
                             </div>
                             <div class="card-content">
                                 <h4>Jollof Rice</h4>

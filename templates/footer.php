@@ -112,19 +112,9 @@
             color: #fff;
             transition: .2s ease-out;
         }
-        .logout{
-            width: 300px;
-            text-align: center;
-            background-color: #fff !important;
-            border-radius: 0 0 2px 2px !important;
-            padding: 12px 20px;
-            border: 1px solid rgba(160,160,160,0.2) !important;
-            position: relative;
-        }
-        .logoutBtn:hover{
-            color: #e57373  !important;
-            transition: ease-out.2s;
-            cursor: pointer;
+        .receipt_btn{
+            width: 50px !important;
+            margin: 12px 7px;
         }
         .more{
             background-color: #00C853;
@@ -282,6 +272,7 @@
         .cart_container{
             padding: 20px;
             margin-top: 5%;
+            margin-bottom: 5%;
             border: 1px solid black;
         }
         .cart_i{
@@ -340,6 +331,8 @@
         .order_placed{
             border: 2px solid black;
             border-radius: 5px;
+            margin: 10px 10px;
+            width: 166px !important;
         }
         .total_price{
             padding: 30px 0;
@@ -390,7 +383,7 @@
             $('.dropdown-trigger').dropdown();
             $('select').formSelect();
             $('.fixed-action-btn').floatingActionButton();
-            // $('.tooltipped').tooltip();
+            $('.tooltipped').tooltip();
             $('.sidenav').sidenav();
             $('.parallax').parallax();
         })

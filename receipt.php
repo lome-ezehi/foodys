@@ -2,7 +2,9 @@
 include ('./templates/nav.php');
 include ('./templates/connect.php');
 
+
 $user_id = $_GET['user_id']; // Retrieve the user ID from the URL
+
 
 // Fetch all receipts for the specific user
 $select_receipt_query = "SELECT * FROM `receipts_tb` WHERE `user_id` = $user_id ORDER BY `order_date` DESC";
@@ -38,6 +40,7 @@ $receipts = mysqli_fetch_all($select_query, MYSQLI_ASSOC);
                     <?php } ?>
                 </tbody>
             </table>
+            <div class="center-align" style="margin: 20px 10px;"><a href="dashboard.php" class="btn green accent-4 white-text">Checkout</a></div>
             <?php } else {
                 echo "<p class='center-align'>No orders found.</p>";
             } ?>
