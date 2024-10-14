@@ -11,12 +11,18 @@ $select_receipt_query = "SELECT * FROM `receipts_tb` WHERE `user_id` = $user_id 
 $select_query = mysqli_query($db_connect, $select_receipt_query);
 $receipts = mysqli_fetch_all($select_query, MYSQLI_ASSOC);
 // print_r($receipts);
+
+$select_userId = "SELECT DISTINCT `user_id` FROM `receipts_tb`";
+$select_userId_query = mysqli_query($db_connect, $select_userId);
+$userId = mysqli_fetch_assoc($select_userId_query);
+// print_r($userId);
+
 ?>
 
 <body>
     <main>
         <div class="container center-align orders_head">
-            <h2 class="green-text text-accent-4 solid">Order Receipt</h2>
+            <h2 class="green-text text-accent-4 solid">Order Receipt -> <?php echo $user_id; ?></h2>
             <?php if ($receipts) { ?>
                 <table class="striped">
                     <thead>

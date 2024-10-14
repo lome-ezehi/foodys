@@ -26,8 +26,8 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
 <body>
     <main>
         <div class="container">
-            <h3 class="hide-on-med-and-down">All Categories</h3>
-            <h3 class="center-align hide-on-large-only">All Categories</h3>
+            <h3 class="hide-on-med-and-down bold_text">All Categories</h3>
+            <h3 class="center-align hide-on-large-only bold_text">All Categories</h3>
             <div class="row">
                 <div class="col l2 s12">
                     <a onclick="showCategory('dessert')" class="btn green center-align accent-4 cat_link">
@@ -56,8 +56,8 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
         </div>
         <!-- Dessert -->
         <div id="dessert" class="container hidden categories">
-            <div class="divider"></div>
-            <h4 >Dessert</h4><br>
+            <div class="divider div_menu"></div>
+            <h4 class="bold_text">Dessert</h4><br>
             <div class="row">
                 <?php
                 foreach ($desserts as $dessert) { ?>
@@ -83,8 +83,8 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
         </div>
         <!-- Breakfast -->
         <div id="breakfast" class="container categories ">
-            <div class="divider"></div>
-            <h4>Breakfast</h4><br>
+            <div class="divider div_menu"></div>
+            <h4 class="bold_text">Breakfast</h4><br>
             <div class="row">
                 <?php foreach ($breakfasts as $breakfast) { ?>
                 <div class="col s12 m6 l4">
@@ -109,8 +109,8 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
         </div>
         <!-- Lunch -->
         <div id="lunch" class="container hidden categories">
-            <div class="divider"></div>
-            <h4>Lunch</h4><br>
+            <div class="divider div_menu"></div>
+            <h4 class="bold_text">Lunch</h4><br>
             <div class="row">
                 <?php
                 foreach ($lunchs as $lunch) { ?>
@@ -136,8 +136,8 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
         </div>
         <!-- Dinner -->
         <div id="dinner" class="container hidden categories">
-            <div class="divider"></div>
-            <h4 >Dinner</h4><br>
+            <div class="divider div_menu"></div>
+            <h4 class="bold_text">Dinner</h4><br>
             <div class="row">
                 <?php
                 foreach ($dinners as $dinner) { ?>
@@ -163,8 +163,8 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
         </div>
         <!-- Drinks -->
         <div id="drink" class="container hidden categories">
-            <div class="divider"></div>
-            <h4 >Drinks</h4><br>
+            <div class="divider div_menu"></div>
+            <h4 class="bold_text">Drinks</h4><br>
             <div class="row">
                 <?php
                 foreach ($drinks as $drink) { ?>

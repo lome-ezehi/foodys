@@ -19,15 +19,15 @@ $username = $_SESSION['username'];
             <nav class="z-depth-0 theme">
                 <div class="nav-wrapper">
                     <!-- M sidenav -->
-                    <a data-target="mobile-demo" class="sidenav-trigger hide-on-large-only black-text" href="#"><i class="material-icons">menu</i></a>
+                    <a data-target="mobile-demo" class="sidenav-trigger hide-on-large-only grey-text text-darken-4" href="#"><i class="material-icons">menu</i></a>
                     <!--M Mobile brand logo -->
                     <div class="brand-logo">
                         <!-- M mobile  -->
-                        <a href="index.php" class="black-text hide-on-large-only"><em>F<span class="green-text text-accent-4">öö</span>dys</em></a>
+                        <a href="index.php" class="grey-text text-darken-4 hide-on-large-only"><em>F<span class="green-text text-accent-4">öö</span>dys</em></a>
                     </div>
                     <!--M account  -->
                     <ul class="hide-on-large-only right">
-                        <li><a href="dashboard.php" class="black-text"><i class="material-icons left">person</i>
+                        <li><a href="dashboard.php" class="grey-text text-darken-4"><i class="material-icons left">person</i>
                         <?php 
                         if ($_SESSION['username']) {
                             echo $_SESSION['username'];
@@ -39,18 +39,18 @@ $username = $_SESSION['username'];
                     </ul>
                     <!-- D desktop brand-logo  -->
                     <div class="brand-logo">
-                        <a href="index.php" class="hide-on-med-and-down black-text brand_logo"><em>F<span class="green-text text-accent-4">öö</span>dys</em></a>
+                        <a href="index.php" class="hide-on-med-and-down grey-text text-darken-4 brand_logo"><em class="bold_text">F<span class="bold_text green-text text-accent-4">öö</span>dys</em></a>
                     </div>
                     <!-- D desktop navbar  -->
                     <div class="container">
                         <ul class="hide-on-med-and-down center_nav">
-                            <li><a href="index.php" class="nav_link black-text"><i class="material-icons left">home</i>Home</a></li>
-                            <li><a href="menu.php" class="nav_link black-text"><i class="material-icons left">dinner_dining</i>Menu</a></li>
-                            <li><a href="cart.php" class="nav_link black-text"><i class="material-icons left">shopping_cart</i>Your Order</a></li>
+                            <li><a href="index.php" class="nav_link grey-text text-darken-4"><i class="material-icons left">home</i>Home</a></li>
+                            <li><a href="menu.php" class="nav_link grey-text text-darken-4"><i class="material-icons left">dinner_dining</i>Menu</a></li>
+                            <li><a href="cart.php" class="nav_link grey-text text-darken-4"><i class="material-icons left">shopping_cart</i>Your Order</a></li>
                         </ul>
                     </div>
                     <ul class="right hide-on-med-and-down">
-                        <li><a class="nav_link black-text dropdown-trigger" data-target="dropdown1"><i class="material-icons left">person</i>
+                        <li><a class="nav_link grey-text text-darken-4 dropdown-trigger" data-target="dropdown1"><i class="material-icons left">person</i>
                         <?php 
                         echo $username;
                         ?>
@@ -62,9 +62,9 @@ $username = $_SESSION['username'];
                         <li><a href="logout.php" class="center-align red-text">LOGOUT</a></li>
                     </ul>
                 </div>
+                <div class="divider"></div>
             </nav>
         </div>
-        <div class="divider"></div>
     </header>
 </body>
 

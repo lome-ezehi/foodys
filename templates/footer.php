@@ -44,7 +44,7 @@
         }
         .solid{
             display: inline;
-            border-bottom: 2px solid;
+            /* border-bottom: 2px solid; */
         }
         .bold_text{
             font-weight: bold;
@@ -190,7 +190,7 @@
             border-radius: 5px;
         }
         .order_container{
-            margin-top: 100px;
+            margin-top: 70px;
         }
         .wrapper{
             width: 80%;
@@ -252,11 +252,35 @@
             border: 2px solid rgba(0, 0, 0, 0.2);
             box-shadow: 10px 10px 15px #aaaaaa;
         }
+        .order_div{
+            margin: 20px 0;
+        }
         .order_btn{
-            background-color: #f4f4f4;
+            background-color: #2ecc71;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+        .cart_order{
+            background-color: #2ecc71;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+        .order_btn:hover, .cart_order:hover {
+            background-color: #27ae60;
         }
         .function_btn{
             margin: 0 20px;
+            border-radius: 6px;
+            background-color: #e74c3c;
+            transition: background-color 0.3s ease;
+        }
+        .cart_delete{
+            background-color: #e74c3c;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+        .function_btn:hover, .cart_delete:hover {
+            background-color: #c0392b;
         }
         .input-field input:focus {
             border-bottom: 1px solid #00C853 !important;
@@ -286,18 +310,11 @@
         .delete_cart:hover{
             background-color: transparent;
         }
-        .order_card{
-            border: 2px solid black;
-        }
-        .order_image{
-            width: 400px;
-            border-right: 2px solid rgba(0, 0, 0, 0.2);
-            padding: 100px 0;
-        }
         .divider_cart{
             margin-top: 15px;
             margin-bottom: 15px;
         }
+        
         .cart_food{
             margin-top: 20px;
         }
@@ -315,10 +332,17 @@
         .clear_btn{
             margin: 10px;
         }
+        .order_card {
+            border-radius: 12px;
+            box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+            overflow: hidden; /* Prevents overflowing of content */
+        }
         .card_image{
-            border-right: 2px black solid;
+            /* border-right: 2px solid rgba(0, 0, 0, 0.2); */
+            padding: 20px !important;
             text-align: center;
             width: 400px;
+            height: auto;
             position: relative;
         }
         .card_image img{
@@ -356,6 +380,22 @@
         }
         .account_btn{
             margin: 20px 16px;
+        }
+        .div_container{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* margin: 30px 0; */
+            width: 1200px;
+        }
+        .div_menu{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1200px;
+            margin-bottom: 10px;
         }
     </style>
 </head>

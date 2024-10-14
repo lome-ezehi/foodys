@@ -49,34 +49,6 @@ if (isset($_POST["place_order"])) {
     exit();
 }
 
-// if (isset($_POST['place_order'])) {
-//     $user_id = 1; // Example user_id, in real case this would be fetched dynamically
-
-//     // Insert each cart item into the `receipts_tb`
-//     foreach ($carts as $cart) {
-//         $food_name = $cart['food_name'];
-//         $quantity = $cart['quantity'];
-//         $food_price = $cart['food_price'];
-//         $total_price = $food_price * $quantity;
-
-//         $insert_receipt_query = "INSERT INTO `receipts_tb` (`user_id`, `food_name`, `quantity`, `food_price`, `total_price`)
-//                                  VALUES (?, ?, ?, ?, ?)";
-//         $stmt = $db_connect->prepare($insert_receipt_query);
-//         $stmt->bind_param('isidd', $user_id, $food_name, $quantity, $food_price, $total_price);
-//         $stmt->execute();
-//     }
-
-//     // Clear the cart after placing the order
-//     $clear_cart_query = "DELETE FROM `foodysCart_tb` WHERE `user_id` = ?";
-//     $stmt = $db_connect->prepare($clear_cart_query);
-//     $stmt->bind_param('i', $user_id);
-//     $stmt->execute();
-
-//     // Redirect to the receipt page after placing the order
-//     header("Location: receipt.php?user_id=" . $user_id);
-//     exit();
-// }
-
 if (isset($_POST["clear_cart"])) {
     //sending query to delete all from table
     $delete_all_query = "DELETE FROM `foodysCart_tb`";
@@ -84,7 +56,7 @@ if (isset($_POST["clear_cart"])) {
 
     $send_query = mysqli_query($db_connect, $select_query);
     $carts = mysqli_fetch_all($send_query, MYSQLI_ASSOC);
-    echo "<p class='center-align red-text'>Cart cleared!</p>";
+    echo "<p class='center-align red-text'>Cart cleared! </p>";
 }
 
 ?>
@@ -94,7 +66,7 @@ if (isset($_POST["clear_cart"])) {
             <div class="container theme cart_container">
                 <div class="container cart_i left-align">
                     <div class="cart center-align">
-                        <h2 class="green-text text-darken-2 solid center-align">Cart</h2>
+                        <h3 class="bold_text grey-text text-darken-4 solid center-align">Cart</h3>
                     </div>
                     <div class="row">
                         <?php if ($carts) { ?>
@@ -126,8 +98,8 @@ if (isset($_POST["clear_cart"])) {
                                 ?>
                             </h5>
                             <div class="place_order">
-                                <input type="submit" value="Place order" name="place_order" class="clear_btn btn green accent-4 ">
-                                <input type="submit" value="clear order" name="clear_cart" class="clear_btn btn red-text text-darken-4 red lighten-3">
+                                <input type="submit" value="Place order" name="place_order" class="clear_btn btn cart_order">
+                                <input type="submit" value="clear order" name="clear_cart" class="clear_btn btn cart_delete">
                             </div>
                             <div class="add_cart center-align">
                                 <a href="menu.php" class="green-text text-accent-4">Add to cart</a>

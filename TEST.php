@@ -1,193 +1,33 @@
-<?php 
-session_start();
+<?php
+include ('./templates/nav.php');
+include ('./templates/connect.php');
 
-include('./templates/connect.php');
-
-$user_id= "";
-$error_msg = "";
-
-if (isset($_GET['user_id'])) {
-    // assign receipe id to the local variable
-    $user_id = $_GET['user_id'];
-
-    // fetch data from the table using row id
-    $fetch_query = "SELECT * FROM `login_tb` WHERE `user_id` = $user_id";
-
-    // send query to server
-    $send_fetch_query = mysqli_query($db_connect, $fetch_query);
-
-    // store received data in an associative array
-    $users = mysqli_fetch_assoc($send_fetch_query);
-
-    // print_r($users);
-
-    if (!$users) {
-        $error_msg = "user not found";
-    }
-
-} else {
-    $error_msg = "No user logged in !";
-}
-
+$username = $_SESSION['username'];
 ?>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/materialize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Chic Charms</title>
-</head>
-
 <style>
-
-    * playwrite-de-grund-font {
-    font-family: "Playwrite DE Grund", cursive;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    }
-
-    .brand-logo{
-        margin-left: 50px;
-    }
-
-    .blush-pink{
-        background-color: #ff4d88 !important;
-    }
-
-    .blush-pink-text{
-        color: #ff4d88 !important;
-    }
-
-    .gold{
-        background-color: #f7cd45 !important;
-    }
-
-    .gold-text{
-        color: #f8e79b !important;
-    }
-
-    .creamy-white{
-    background-color: #fdf3e7 !important;
-    }
-
-    .creamy-white-text{
-        color: #fdf3e7 !important;
-    }
-
-    .charcoal{
-        color: #333333 !important;
-    }
-
-    .warm-gray{
-        color: #7d7d7d !important;
-    }
-
-    @media only screen and (min-width: 601px) {
-        nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
-            height: 85;
-        }
-    }
-
-    .mobile_logo{
-        margin-bottom: 50px;
-    }
-
-    .navbar{
-        padding-bottom: 15px;
+    .div{
+        width: 500px;
+        height: 400px;
+        background-color: #0DABCB;
+        overflow: scroll;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px grey solid;
+        border-radius: 5px;
     }
 </style>
 
-<body class="creamy-white">
-    <!-- header -->
-    <header>
-        <div class="navbar-fixed ">
-            <nav class="z-depth-0 nav-wrapper blush-pink">
-                <div class="container">
-                    <div class="row">
-                        <a href="index.php" class="gold-text brand-logo hide-on-med-and-down">Chic Charms</a>
-                        <a href="index.php" class="brand-logo hide-on-large-only mobile_logo"><img width="55px" src="./img/logo.png" alt="" class="responsive-img"></a>
-                        <a href="#sidenav" class="sidenav-trigger creamy-white-text"><i class="material-icons">menu</i></a>
-
-                        <ul class="right">
-                            <li class="">
-                                <a href="#" data-target="dropdown1" class="creamy-white-text dropdown-trigger">Account<i class=" left material-icons">account_circle</i></a>
-                                <ul class="dropdown-content" id="dropdown1">
-                                    <li> <a class=" charcoal center bold-text" href="#!">Account Settings</a> </li>
-                                    <li class="divider" tabindex="-1"></li>
-                                    <li class="divider" tabindex="-1"></li>
-                                    <li> <a class="charcoal" href="#!">My Orders</a> </li>
-                                    <li> <a class="charcoal" href="edit_account.php?user_id=<?php echo $users['user_id']; ?>"> Edit Account</a> </li> 
-                                    <li> <a class=" charcoal red-text" href="logout.php"><i class="material-icons">input</i>Logout</a> </li>
-                                    <li class="divider" tabindex="-1"></li>
-                                    <li> <a class=" center charcoal red white-text" href="#!"><i class="material-icons">delete_forever</i>Delete Account</a> </li>
-                                </ul>
-                            </li>
-                            <li class="nav-icon">
-                                <a href="" class="creamy-white-text">Cart<i class="left material-icons">shopping_cart</i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+<body>
+    <main>
+        <div class="div" id="div">
+            <h4 class="bold_text center-align">Scroll Down <i class="material-icons">arrow_drop_down</i></h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis porro eius sunt distinctio! Laboriosam aut sit eum ad atque exercitationem hic nemo commodi. Maiores, totam vitae tenetur ut consectetur, fugiat eius necessitatibus dolorum labore distinctio vero dicta quaerat magni quidem laborum porro perspiciatis a, eos magnam beatae animi rem laboriosam fuga. Minus non facilis quaerat quo perspiciatis harum inventore, rerum tenetur nulla eius distinctio ipsum totam voluptatem ullam voluptates qui voluptatibus reprehenderit minima nesciunt vero nam. Qui, minima. Eaque non nemo quis illum dolor aliquid dicta fuga. Ab, quia voluptatem tempore eligendi consequatur quae error distinctio atque earum quidem, a doloribus adipisci non dolor asperiores. Totam quos ipsam quaerat, maxime, distinctio accusamus fuga dolorem temporibus soluta natus harum, officiis hic placeat. Ea mollitia voluptatum vel, maxime soluta, minima corporis non voluptatibus velit explicabo ipsam vero blanditiis adipisci tempore perspiciatis facere eligendi earum dolorum possimus aliquam, ullam debitis omnis nulla. Cumque facere aspernatur accusantium ipsum iure voluptatum, minus dolorem omnis sunt deserunt molestias totam consequatur quasi corrupti, ratione laboriosam. Possimus eius cum hic animi quibusdam accusantium non, natus et repellat, ducimus quo, veritatis maxime corporis vel dolorem quasi quia quos! Assumenda nemo numquam vel corporis alias necessitatibus, ut, laborum aut ea impedit dolorum mollitia obcaecati quasi accusantium adipisci suscipit iusto dignissimos odio error recusandae magnam eos fugiat quae. Culpa exercitationem ex illum iusto dolores adipisci blanditiis consequuntur dolorum, libero delectus rerum? Optio id tenetur beatae illum dolore doloribus aliquam velit harum ipsa enim dolor ad mollitia officia, saepe culpa numquam odit ea qui magni asperiores officiis quod veritatis. Accusamus nisi obcaecati voluptatum commodi possimus vel, delectus cum porro incidunt maiores pariatur ea nam fugiat iste! Dicta, recusandae aperiam ut voluptatibus laudantium odit enim at. Sapiente odio, distinctio aliquid nulla a commodi sed tenetur repudiandae porro hic dignissimos asperiores eaque dicta obcaecati non, numquam repellat soluta ab voluptate molestias id cum esse tempore consequatur! Perspiciatis tempore autem, sunt inventore quis neque culpa nostrum, odio consequatur, eum minima sequi. Quam facilis totam porro architecto quis blanditiis eius iste tempore odio cum esse debitis officiis vel nihil expedita officia quae ipsam rerum reiciendis, quos molestias similique velit aperiam! Ipsam perferendis excepturi exercitationem temporibus unde facilis quam suscipit corrupti neque, numquam illum deleniti porro. Iure consequuntur tenetur tempore quia? Delectus, fuga quos exercitationem obcaecati commodi ipsam incidunt voluptas expedita autem facilis, nihil aliquid repellat id esse, consequatur officiis vitae? Quis, rerum? Nemo libero, voluptatem veniam deserunt autem, doloribus omnis est vero culpa facilis esse dolorum amet quo iusto eveniet impedit corporis sunt sed laudantium atque similique commodi debitis dolor. Iusto natus est ipsam neque tempora pariatur cum nemo? Doloremque neque at temporibus dignissimos enim dicta quaerat iusto, ut fugit dolorem ducimus ipsum quis. Quasi similique quam architecto deleniti tenetur, neque quaerat excepturi ea ipsa tempore animi recusandae consequuntur? Exercitationem dolore voluptate magni sint tenetur, atque fuga voluptas excepturi harum similique sunt eveniet a cumque, placeat quisquam repudiandae nisi laudantium qui et ratione odit? Veritatis, blanditiis tempore temporibus labore nisi laboriosam adipisci delectus porro quas quos culpa illo mollitia doloremque, quam eum dolor itaque eligendi fugiat. Quo fuga voluptates aliquid ipsa esse, velit nobis. At doloribus esse, rem cum hic quaerat nulla debitis similique quo qui, accusantium assumenda rerum unde reprehenderit architecto nam ullam ad aspernatur adipisci illo quidem officiis. Ipsam veniam, natus tempora cum animi explicabo. Qui minima doloremque, tenetur eos obcaecati unde corporis, at quos error, voluptatem commodi. Vero reiciendis deserunt labore dolor, consequatur aliquid ullam reprehenderit illum fugiat. Odit, quasi! Architecto assumenda delectus a praesentium, aliquam possimus, nihil eius aliquid nesciunt veritatis fugiat rerum ex. Libero pariatur quod perspiciatis at molestias consequuntur veniam!</p>
         </div>
-        <ul id="sidenav" class="sidenav">
-        <h5 class="charcoal">Type</h5>
-            <ul>
-                <li>
-                    <a href="" class="warm-gray">Bracelets</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray ">Earrings</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Rings</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Necklaces</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Headbands</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Hair Clips</a>
-                </li>
-            </ul>
-        <h5 class="charcoal">Color</h5>
-            <ul>
-                <li>
-                    <a href="" class="warm-gray">Blue</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Red</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">White</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Black</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Pink</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Multicolor</a>
-                </li>
-            </ul>
-        </ul>
-    </header>
+    </main>
 </body>
 
-<script src="js/jquery.js"></script>
-    <script src="js/materialize.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.sidenav').sidenav();
-        });
-    </script>
+<?php
+include ('./templates/footer.php');
+?>
