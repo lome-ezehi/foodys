@@ -189,7 +189,7 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
             </div>
         </div>
     </main>
-    <script type="text/javascript">
+    <script>
         function showCategory(category) {
             // Hide all categories first
             let categories = document.querySelectorAll('.container.categories');
@@ -199,16 +199,16 @@ $desserts = mysqli_fetch_all($send_dessert_query, MYSQLI_ASSOC);
             // Show the selected category
             document.getElementById(category).classList.remove('hidden');
         }
-        var btn = document.getElementById("icon");
-        function like() {
-            if(btn.classList.contains("far")){
-                btn.classList.remove("far");
-                btn.classList.add("fas");
-            }else{
-                btn.classList.remove("fas");
-                btn.classList.remove("far");
-            }
-        }
+        // var btn = document.getElementById("icon");
+        // function like() {
+        //     if(btn.classList.contains("far")){
+        //         btn.classList.remove("far");
+        //         btn.classList.add("fas");
+        //     }else{
+        //         btn.classList.remove("fas");
+        //         btn.classList.remove("far");
+        //     }
+        // }
     </script>
 </body>
 <?php

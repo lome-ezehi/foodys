@@ -384,7 +384,7 @@
             padding-top: 30px;
         }
         .account_btn{
-            margin: 20px 16px;
+            margin: 20px 5px;
         }
         .div_container{
             position: relative;

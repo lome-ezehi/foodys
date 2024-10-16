@@ -80,7 +80,8 @@ if (isset($_POST['completed'])) {
                     </div>
                     <p class="small">Hello, <?php echo $username . '.'; ?></p>
                     <div class="button">
-                        <a href="signup.php" class="btn btn-large white-text green accent-4 account_btn"><i class="material-icons left">person_add</i> Add an account</a>
+                        <a href="signup.php" class="btn white-text green accent-4 account_btn"><i class="material-icons left">person_add</i> Add an account</a>
+                        <a href="insert_order.php" class="btn white-text green accent-4 account_btn"><i class="material-icons left">dinner_dining</i> Add to menu</a>
                     </div>
                 </div>
             </div>
