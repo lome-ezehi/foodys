@@ -14,7 +14,7 @@ if (isset($_POST['login'])) {
     $fetch_login_details = "SELECT * FROM `user_tb` WHERE `username` = '$username' ";
     
     $send_query = mysqli_query($db_connect, $fetch_login_details);
-    // print_r ($send_query);
+    print_r ($send_query);
 
     //if username corresponds with the username in the database
     if (mysqli_num_rows($send_query) > 0) {
@@ -23,6 +23,7 @@ if (isset($_POST['login'])) {
         // checks if password is correct
         if ($login_details['password'] === $_POST['password']) {
             $_SESSION['username'] = $_POST['username'];
+            $_SESSION['user_id'] = $login_details['user_id'];
             header('Location: index.php');
             exit();
         }else {

@@ -321,6 +321,10 @@
         .quantity_input{
             margin-top: 10px;
         }
+        .order_quantity{
+            width: 50px !important;
+            text-align: right;
+        }
         .delete_cart{
             position: relative;
             margin-top: 10px;
@@ -367,6 +371,7 @@
         .text-parallel{
             position: absolute;
             left: 70%;
+            /* top: 10%; */
         }
         .green-fork{
             width: 100px;
@@ -403,7 +408,7 @@
     <div class="divider"></div>
     <footer class="page-footer">
         <div class="container center-align">
-            <h5 class="center-align black-text"><a href="./index.php" class="brand-logo black-text"><em>F<span class="green-text text-accent-4">öö</span>dys</em></a> &copy; 2024 </h5>
+            <h5 class="center-align black-text"><a href="./index.php" class="brand-logo black-text"><strong>F<span class="green-text text-accent-4">öö</span>dys</strong></a> &copy; 2024 </h5>
         </div>
     </footer>
 

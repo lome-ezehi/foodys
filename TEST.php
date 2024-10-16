@@ -3,6 +3,19 @@ include ('./templates/nav.php');
 include ('./templates/connect.php');
 
 $username = $_SESSION['username'];
+echo $_SESSION['user_id'];
+
+// index page
+$insert_query = "INSERT INTO `foodysCart_tb` (`food_name`, `food_price`, `quantity`, `order_id`) VALUES ('$food_name', '$food_price', '$quantity', '$order_id')";
+$insert_result = mysqli_query($db_connect, $insert_query);
+
+//cart page
+
+$select_query = '//...';
+$select_result = mysqli_query($db_connect, $select_query);
+$receive = mysqli_fetch_assoc($select_result, MYSQLI_ASSOC);
+
+
 ?>
 <style>
     .div{

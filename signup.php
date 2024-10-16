@@ -26,7 +26,7 @@ if (isset($_POST['signup'])) {
     
             if ($send_query) {
                 $_SESSION['username'] = $_POST['username'];
-                header('Location: landing_page.php');
+                header('Location: index.php');
                 exit();
             }
         }

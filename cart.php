@@ -81,7 +81,7 @@ if (isset($_POST["clear_cart"])) {
                             </div>
                             <div class="quantity_input col l2">
                                 <!-- <label for="q">Quantity: </label> -->
-                                <input type="number" class="right-align" name="edit_quantity" id="quantity" value="<?php echo $cart['quantity']; ?>">
+                                <input type="number" class="right-align" name="edit_quantity" id="quantity" value="<?php echo $cart['quantity']; ?>" disabled>
                             </div>
                             <div class="col l10 food_price" id="price">
                                 <?php echo "₦" . $cart['food_price'] . "<br>" ?>

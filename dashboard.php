@@ -78,7 +78,7 @@ if (isset($_POST['completed'])) {
                     <div class="image_container">
                         <img src="./assets/img/user_default.jpeg" class="circle" width="150px" alt="">
                     </div>
-                    <p class="small">Hello, <?php echo $username; ?></p>
+                    <p class="small">Hello, <?php echo $username . '.'; ?></p>
                     <div class="button">
                         <a href="signup.php" class="btn btn-large white-text green accent-4 account_btn"><i class="material-icons left">person_add</i> Add an account</a>
                     </div>

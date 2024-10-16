@@ -19,7 +19,7 @@ $name = $_SESSION['username'];
         </div>
         <div class="container featured_menu center-align green-text text-darken-4 underline" id="menu">
             <div class="divider black"></div>
-            <h3>Popular Dishes</h3>
+            <!-- <h3>Popular Dishes</h3>
             <div class="row">
                 <div class="col">
                     <div class="col l4">
@@ -56,7 +56,7 @@ $name = $_SESSION['username'];
                         </div>
                     </div>
                 </div>
-            </div>            
+            </div>             -->
         </div>
     </main>
 </body>
